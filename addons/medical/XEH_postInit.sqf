@@ -249,7 +249,7 @@ if (USE_WOUND_EVENT_SYNC) then {
     // broadcast injuries to JIP clients in a MP session
     if (isMultiplayer && hasInterface) then {
         ["playerChanged", {
-            EXPLODE_2_PVT(_this,_newPlayer,_oldPlayer);
+            params ["_newPlayer","_oldPlayer"];
             if (alive _newPlayer) then {
                 // We are only pulling the wounds for the units in the player group. Anything else will come when the unit interacts with them.
                 {

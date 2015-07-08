@@ -13,7 +13,7 @@
  */
 #include "\z\ace\addons\overheating\script_component.hpp"
 
-EXPLODE_2_PVT(_this,_unit,_weapon);
+params ["_unit","_weapon"];
 
 // don't jam a weapon with no rounds left
 if (_unit ammo _weapon == 0) exitWith {};
@@ -27,7 +27,7 @@ _unit setVariable [QGVAR(jammedWeapons), _jammedWeapons];
 
 // this is to re-activate the 'DefaultAction', so you can jam a weapon while full auto shooting
 _fnc_stopCurrentBurst = {
-  EXPLODE_2_PVT(_this,_params,_pfhId);
+  params ["_params","_pfhId"];
   EXPLODE_4_PVT(_params,_unit,_weapon,_ammo,_startFrame);
 
   // Skip the first execution of the PFH

@@ -15,7 +15,7 @@
  * Public: Yes
  */
 #include "script_component.hpp"
-EXPLODE_2_PVT(_this,_unit,_explosive);
+params ["_unit","_explosive"];
 
 if (GVAR(ExplodeOnDefuse) && (random 1.0) < getNumber(ConfigFile >> "CfgAmmo" >> typeOf _explosive >> "ACE_explodeOnDefuse")) exitWith {
     [_unit, -1, [_explosive, 1], true] call FUNC(detonateExplosive);

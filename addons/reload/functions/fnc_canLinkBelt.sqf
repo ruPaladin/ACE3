@@ -11,7 +11,7 @@
  */
 #include "script_component.hpp"
 
-EXPLODE_2_PVT(_this,_player,_target);
+params ["_player","_target"];
 
 if (vehicle _target != _target) exitWith {false};
 

@@ -16,7 +16,7 @@
  */
 #include "\z\ace\addons\overheating\script_component.hpp"
 
-EXPLODE_2_PVT(_this,_player,_weapon);
+params ["_player","_weapon"];
 
 private ["_action"];
 

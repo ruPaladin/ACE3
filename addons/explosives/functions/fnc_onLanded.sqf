@@ -15,7 +15,7 @@
  * Public: No
  */
 #include "script_component.hpp"
-EXPLODE_2_PVT(_this,_explosive,_hitTarget);
+params ["_explosive","_hitTarget"];
 
 TRACE_2("Explosive EpeContactStart",_explosive,_hitTarget);
 
@@ -31,7 +31,7 @@ if (!isNull _hitTarget && {_hitTarget isKindOf "AllVehicles"}) then {
     [[_explosive, _dir, 0], QFUNC(setPosition)] call EFUNC(common,execRemoteFnc);
 } else {
     [{
-        EXPLODE_2_PVT(_this,_player,_explosive);
+        params ["_player","_explosive"];
         private "_pos";
         _pos = getPosASL _explosive;
         if (surfaceIsWater _pos) then {

@@ -15,7 +15,7 @@
  */
 #include "script_component.hpp"
 private ["_isSpecialist"];
-EXPLODE_2_PVT(_this,_unit,_target);
+params ["_unit","_target"];
 if (isNull(_target getVariable [QGVAR(Explosive),objNull])) exitWith {
     deleteVehicle _target;
     false

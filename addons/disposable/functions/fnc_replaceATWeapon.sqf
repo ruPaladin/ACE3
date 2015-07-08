@@ -49,7 +49,7 @@ _unit selectWeapon _replacementTube;
 // AI - Remove the ai's missle launcher tube after the missle has exploded
 if !([_unit] call EFUNC(common,isPlayer)) then {
     [{
-        EXPLODE_2_PVT(_this,_params,_pfhId);
+        params ["_params","_pfhId"];
         EXPLODE_3_PVT(_params,_unit,_tube,_projectile);
 
         //don't do anything until projectile is null (exploded/max range)
@@ -66,13 +66,13 @@ if !([_unit] call EFUNC(common,isPlayer)) then {
             _container = createVehicle ["GroundWeaponHolder", position _unit, [], 0, "CAN_COLLIDE"];
             _container setPosAsl (getPosAsl _unit);
             _container addWeaponCargoGlobal [_tube, 1];
-            
+
             //This will duplicate attachements, because we will be adding a weapon that may already have attachments on it
             //We either need a way to add a clean weapon, or a way to add a fully configured weapon to a container:
             // {
                 // if (_x != "") then {_container addItemCargoGlobal [_x, 1];};
             // } forEach _items;
-            
+
             _unit removeWeaponGlobal _tube;
         };
     }, 1, [_unit, _replacementTube, _projectile]] call CBA_fnc_addPerFrameHandler;

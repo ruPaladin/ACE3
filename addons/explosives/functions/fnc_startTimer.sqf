@@ -16,7 +16,7 @@
  */
 #include "script_component.hpp"
 
-EXPLODE_2_PVT(_this,_explosive,_delay);
+params ["_explosive","_delay"];
 
 [{
     private ["_explosive"];

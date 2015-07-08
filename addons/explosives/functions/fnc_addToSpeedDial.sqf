@@ -19,7 +19,7 @@ private ["_speedDial", "_found"];
 _speedDial = ace_player getVariable [QGVAR(SpeedDial), []];
 _found = false;
 
-EXPLODE_2_PVT(_this,_name,_code);
+params ["_name","_code"];
 
 if ((_code) == "") ExitWith {
     [_name] call FUNC(removeFromSpeedDial);

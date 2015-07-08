@@ -16,7 +16,7 @@
  */
 #include "script_component.hpp"
 closeDialog 0;
-EXPLODE_2_PVT(_this,_unit,_class);
+params ["_unit","_class"];
 GVAR(placer) = _unit;
 // TODO: check MP performance and MP compatible.
 GVAR(Setup) = createVehicle [getText(ConfigFile >> "CfgMagazines" >> _class >> "ACE_SetupObject"),[0,0,-10000],[], 0, "NONE"];

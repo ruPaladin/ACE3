@@ -16,7 +16,7 @@
  */
 #include "script_component.hpp"
 private ["_arr", "_ran", "_i"];
-EXPLODE_2_PVT(_this,_unit,_code);
+params ["_unit","_code"];
 if (_unit getVariable [QGVAR(Dialing),false]) exitWith {};
 if !(alive _unit) exitWith {};
 _unit setVariable [QGVAR(Dialing), true, true];

@@ -17,7 +17,7 @@ if !(hasInterface) exitWith {};
 
 // Instantly hide knobs when scoping in
 ["cameraViewChanged", {
-    EXPLODE_2_PVT(_this,_player,_newCameraView);
+    params ["_player","_newCameraView"];
     if (_newCameraView == "GUNNER") then {
         private "_layer";
         _layer = [QGVAR(Zeroing)] call BIS_fnc_rscLayer;

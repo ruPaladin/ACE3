@@ -15,14 +15,14 @@
  * Public: Yes
  */
 #include "script_component.hpp"
-EXPLODE_2_PVT(_this,_unit,_target);
+params ["_unit","_target"];
 
 private["_actionToPlay", "_defuseTime", "_isEOD"];
 
 _target = attachedTo (_target);
 
 _fnc_DefuseTime = {
-    EXPLODE_2_PVT(_this,_specialist,_target);
+    params ["_specialist","_target"];
     private ["_defuseTime"];
     _defuseTime = 5;
     if (isNumber(ConfigFile >> "CfgAmmo" >> typeOf (_target) >> "ACE_DefuseTime")) then {

@@ -16,7 +16,7 @@
  */
 #include "script_component.hpp"
 private ["_bullets", "_position", "_surface", "_weapon", "_cloudType", "_unit"];
-EXPLODE_2_PVT(_this,_unit,_weapon);
+params ["_unit","_weapon"];
 if (_unit != ace_player) exitWith {true};
 _cloudType = "";
 

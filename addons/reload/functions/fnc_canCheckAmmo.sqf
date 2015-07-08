@@ -7,7 +7,7 @@
  * 1: Target <OBJECT>
  *
  * Return value:
- * Can link belt<BOOL> 
+ * Can link belt<BOOL>
  *
  * Example:
  * [player, bob] call ace_reload_fnc_canCheckAmmo
@@ -16,7 +16,7 @@
  */
 #include "script_component.hpp"
 
-EXPLODE_2_PVT(_this,_player,_target);
+params ["_player","_target"];
 
 private ["_magazineType", "_magazineCfg"];
 

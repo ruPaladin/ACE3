@@ -13,7 +13,7 @@
  */
 #include "\z\ace\addons\overheating\script_component.hpp"
 
-EXPLODE_2_PVT(_this,_player,_weapon);
+params ["_player","_weapon"];
 
 if (stance _player != "PRONE") then {
   [_player, "amovpknlmstpsraswrfldnon", 1] call EFUNC(common,doAnimation);

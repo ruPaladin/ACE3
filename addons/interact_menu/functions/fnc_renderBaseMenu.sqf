@@ -18,7 +18,7 @@ BEGIN_COUNTER(fnc_renderBaseMenu)
 
 private ["_distance","_pos","_weaponDir","_ref","_sPos","_activeActionTree", "_line"];
 
-EXPLODE_2_PVT(_this,_object,_baseActionNode);
+params ["_object","_baseActionNode"];
 EXPLODE_1_PVT(_baseActionNode,_actionData);
 
 _distance = _actionData select 8;
@@ -81,7 +81,7 @@ END_COUNTER(fnc_collectActiveActionTree)
 /*
 diag_log "Printing: _activeActionTree";
 _fnc_print = {
-    EXPLODE_2_PVT(_this,_level,_node);
+    params ["_level","_node"];
     EXPLODE_3_PVT(_node,_actionData,_children,_object);
     diag_log text format ["Level %1 -> %2 on %3", _level, _actionData select 0, _object];
     {

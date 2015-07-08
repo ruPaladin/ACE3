@@ -54,7 +54,7 @@ addMissionEventHandler ["Draw3D", DFUNC(render)];
     // If no menu is open just quit
     if (GVAR(openedMenuType) < 0) exitWith {};
 
-    EXPLODE_2_PVT(_this,_unit,_isUnconscious);
+    params ["_unit","_isUnconscious"];
 
     if (_unit != ACE_player || !_isUnconscious) exitWith {};
 

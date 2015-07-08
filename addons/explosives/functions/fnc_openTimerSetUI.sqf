@@ -15,7 +15,7 @@
  * Public: No
  */
 #include "script_component.hpp"
-EXPLODE_2_PVT(_this,_explosive,_mag);
+params ["_explosive","_mag"];
 createDialog "RscACE_SelectTimeUI";
 sliderSetRange [8845, 5, 900]; // 5seconds - 15minutes
 sliderSetPosition [8845, 30];

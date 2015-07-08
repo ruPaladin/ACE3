@@ -179,7 +179,7 @@ enableCamShake true;
 
 // Set the name for the current player
 ["playerChanged", {
-    EXPLODE_2_PVT(_this,_newPlayer,_oldPlayer);
+    params ["_newPlayer","_oldPlayer"];
 
     if (alive _newPlayer) then {
         [_newPlayer] call FUNC(setName)

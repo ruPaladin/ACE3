@@ -62,7 +62,7 @@ GVAR(disarmTarget) = _target;
 [{
     private ["_groundContainer", "_targetContainer", "_playerName", "_rankPicture", "_rankIndex", "_targetUniqueItems", "_holderUniqueItems", "_holder"];
     disableSerialization;
-    EXPLODE_2_PVT(_this,_args,_pfID);
+    params ["_args","_pfID"];
     EXPLODE_3_PVT(_args,_player,_target,_display);
 
     if ((!([_player, _target] call FUNC(canPlayerDisarmUnit))) ||

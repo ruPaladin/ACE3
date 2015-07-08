@@ -36,7 +36,7 @@ _lightTint = switch (true) do {
 
 // Calculates overlay color from tint and light level
 _fnc_calcColor = {
-    EXPLODE_2_PVT(_this,_c1,_lightLevel);
+    params ["_c1","_lightLevel"];
 
     if (_lightLevel < 0.5) then {
         _l = _lightLevel / 0.5;

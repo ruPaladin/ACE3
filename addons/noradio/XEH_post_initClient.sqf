@@ -15,7 +15,7 @@ if (!hasInterface) exitWith {};
 
 // Mutes/unmutes units when the player changes
 ["playerChanged", {
-    EXPLODE_2_PVT(_this,_newPlayer,_oldPlayer);
+    params ["_newPlayer","_oldPlayer"];
 
     // On player change mute the new player
     [_newPlayer, "isPlayer"] call EFUNC(common,muteUnit);
