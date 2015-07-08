@@ -20,7 +20,7 @@
 
 #include "script_component.hpp"
 
-PARAMS_5(_player,_target,_alpha,_heightOffset,_iconType);
+params ["_player","_target","_alpha","_heightOffset","_iconType"];
 
 private ["_position", "_color", "_name", "_rank", "_size", "_icon", "_scale"];
 

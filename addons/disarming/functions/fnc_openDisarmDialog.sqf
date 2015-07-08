@@ -47,7 +47,7 @@ GVAR(disarmTarget) = _target;
 //Setup Drop Event (on right pannel)
 (_display displayCtrl 632) ctrlAddEventHandler ["LBDrop", {
     if (isNull GVAR(disarmTarget)) exitWith {};
-    PARAMS_5(_ctrl,_xPos,_yPos,_idc,_itemInfo);
+    params ["_ctrl","_xPos","_yPos","_idc","_itemInfo"];
     EXPLODE_3_PVT((_itemInfo select 0),_displayText,_value,_data);
 
     if (isNull GVAR(disarmTarget)) exitWith {ERROR("disarmTarget is null");};

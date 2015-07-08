@@ -18,7 +18,7 @@
  */
 #include "script_component.hpp"
 
-PARAMS_5(_wire,_selectionName,_damage,_source,_projectile);
+params ["_wire","_selectionName","_damage","_source","_projectile"];
 
 if (_damage < 0.5) exitWith { 0 };
 

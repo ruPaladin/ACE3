@@ -15,7 +15,7 @@
 
 #include "script_component.hpp"
 
-PARAMS_5(_display,_code,_shiftKey,_ctrlKey,_altKey);
+params ["_display","_code","_shiftKey","_ctrlKey","_altKey"];
 
 private ["_handled", "_relPos", "_diffVector", "_magDiffVector", "_lambdaLong", "_lambdaTrasAbs"];
 
