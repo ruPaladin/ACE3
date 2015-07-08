@@ -25,7 +25,7 @@ private ["_shooterMan", "_bisAirFriction", "_temperature", "_newMuzzleVelocityCo
 
 disableSerialization;
 
-PARAMS_7(_vehicle,_weapon,_muzzle,_mode,_ammo,_magazine,_projectile);
+params ["_vehicle","_weapon","_muzzle","_mode","_ammo","_magazine","_projectile"];
 
 if (!GVAR(airResistanceEnabled)) exitWith {};
 // Large enough distance to not simulate any wind deflection

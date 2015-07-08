@@ -19,7 +19,7 @@
  */
 #include "script_component.hpp"
 
-PARAMS_7(_unit,_weapon,_muzzle,_mode,_ammo,_magazine,_projectile);
+params ["_unit","_weapon","_muzzle","_mode","_ammo","_magazine","_projectile"];
 
 if (_ammo != "F_HuntIR") exitWith {};
 
