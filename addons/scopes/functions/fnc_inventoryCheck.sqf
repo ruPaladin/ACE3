@@ -12,7 +12,7 @@
  */
 #include "script_component.hpp"
 
-EXPLODE_1_PVT(_this,_player);
+params ["_player"];
 
 private ["_newOptics", "_adjustment"];
 

@@ -13,7 +13,7 @@
 
 #define COUNT_BARS 12
 
-EXPLODE_1_PVT(_this,_unit);
+params ["_unit"];
 
 private ["_target"];
 _target = vehicle _unit;

@@ -10,7 +10,7 @@
  */
 #include "script_component.hpp"
 
-EXPLODE_1_PVT(_this,_vehicle);
+params ["_vehicle"];
 
 // Add action to class if it is not already done
 private ["_type", "_initializedClasses"];

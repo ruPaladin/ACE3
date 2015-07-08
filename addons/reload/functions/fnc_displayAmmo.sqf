@@ -12,7 +12,7 @@
 
 #define COUNT_BARS 12
 
-EXPLODE_1_PVT(_this,_target);
+params ["_target"];
 
 private ["_weapon","_muzzle","_magazine","_showNumber","_ammo","_maxRounds","_count","_text","_color","_picture","_ammoBarsStructuredText", "_a", "_loadedName", "_string"];
 

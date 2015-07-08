@@ -13,7 +13,7 @@
 */
 #include "script_component.hpp"
 
-EXPLODE_1_PVT(_this,_unit);
+params ["_unit"];
 
 private ["_isEnclosed","_nearObjects","_light","_ll","_flashlight", "_flareTint", "_lightTint", "_l"];
 

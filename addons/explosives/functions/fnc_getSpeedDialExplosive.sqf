@@ -14,7 +14,7 @@
  * Public: Yes
  */
 #include "script_component.hpp"
-EXPLODE_1_PVT(_this,_code);
+params ["_code"];
 private ["_explosive"];
 if (isNil QGVAR(CellphoneIEDs)) exitWith {[]};
 _explosive = [];
