@@ -18,7 +18,7 @@
 
 private ["_configFile", "_sitDirection", "_sitPosition", "_sitRotation", "_sitDirectionVisual"];
 
-PARAMS_2(_seat,_player);
+params ["_seat","_player"];
 
 // Set global variable for standing up
 GVAR(seat) = _seat;
@@ -47,7 +47,7 @@ _seat setVariable [QGVAR(seatOccupied), true, true]; // To prevent multiple peop
 _sitDirectionVisual = getDirVisual _player; // Needed for precision and issues with using above directly
 [{
     EXPLODE_3_PVT(_this select 0,_player,_sitDirectionVisual,_sitRotation);
-    
+
     // Remove PFH if not sitting any more
     if !(_player getVariable [QGVAR(isSitting), false]) exitWith {
         [_this select 1] call cba_fnc_removePerFrameHandler;

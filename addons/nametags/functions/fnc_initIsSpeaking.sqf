@@ -30,7 +30,7 @@ if (!hasInterface) exitWith {};
 
 ["playerChanged", {
     //When player changes, make sure to reset old unit's variable
-    PARAMS_2(_newUnit,_oldUnit);
+    params ["_newUnit","_oldUnit"];
     if ((!isNull _oldUnit) && {_oldUnit getVariable [QGVAR(isSpeakingInGame), false]}) then {
         _oldUnit setVariable [QGVAR(isSpeakingInGame), false, true];
     };

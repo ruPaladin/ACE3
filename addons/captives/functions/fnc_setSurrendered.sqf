@@ -16,7 +16,7 @@
  */
 #include "script_component.hpp"
 
-PARAMS_2(_unit,_state);
+params ["_unit","_state"];
 
 
 if (!local _unit) exitwith {
@@ -50,7 +50,7 @@ if (_state) then {
             //If we get a change in animation then redo the animation (handles people vaulting to break the animation chain)
             private "_animChangedEHID";
             _animChangedEHID = _unit addEventHandler ["AnimChanged", {
-                PARAMS_2(_unit,_newAnimation);
+                params ["_unit","_newAnimation"];
                 if ((_newAnimation != "ACE_AmovPercMstpSsurWnonDnon") && {!(_unit getVariable ["ACE_isUnconscious", false])}) then {
                     TRACE_1("Surrender animation interrupted",_newAnimation);
                     [_unit, "ACE_AmovPercMstpSsurWnonDnon", 1] call EFUNC(common,doAnimation);
@@ -86,7 +86,7 @@ if (_state) then {
         //spin up a PFEH, to watching animationState for the next 20 seconds to make sure we don't enter "hands up"
         //Handles long animation chains
         [{
-            PARAMS_2(_args,_pfID);
+            params ["_args","_pfID"];
             EXPLODE_2_PVT(_args,_unit,_maxTime);
             //If waited long enough or they re-surrendered or they are unconscious, exit loop
             if ((ACE_time > _maxTime) || {_unit getVariable [QGVAR(isSurrendering), false]} || {_unit getVariable ["ACE_isUnconscious", false]}) exitWith {

@@ -23,7 +23,7 @@ private ["_position", "_checkDistance", "_index"];
 
 _this resize 5;
 
-PARAMS_2(_unit,_vehicle);
+params ["_unit","_vehicle"];
 _position = toLower (_this select 2);
 _checkDistance = _this select 3;
 _index = _this select 4;  // optional, please don't use

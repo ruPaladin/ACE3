@@ -38,7 +38,7 @@ if (isNil QGVAR(MIN) || isNil QGVAR(MAX)) then {
 } forEach [1, 5, 6, 7, 8, 9, 10, 11, 12, 13];
 
 _fnc_updateMemory = {
-    PARAMS_2(_slot,_value);
+    params ["_slot","_value"];
     GVAR(MIN)   set [_slot, (GVAR(MIN) select _slot) min _value];
     GVAR(MAX)   set [_slot, _value max (GVAR(MAX) select _slot)];
     GVAR(TOTAL) set [_slot, (GVAR(TOTAL) select _slot) + _value];

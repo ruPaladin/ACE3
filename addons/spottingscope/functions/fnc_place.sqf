@@ -15,7 +15,7 @@
  */
 #include "script_component.hpp"
 
-PARAMS_2(_unit,_scopeClass);
+params ["_unit","_scopeClass"];
 
 _unit removeItem _scopeClass;
 
@@ -25,17 +25,17 @@ if ((_unit call CBA_fnc_getUnitAnim) select 0 == "stand") then {
 
 [{
     PARAMS_1(_unit);
-    
+
     private ["_direction", "_position", "_spottingScope"];
     _direction = getDir _unit;
     _position = (getPosASL _unit) vectorAdd [0.8 * sin(_direction), 0.8 * cos(_direction), 0.02];
-    
+
     _spottingScope = "ACE_SpottingScopeObject" createVehicle [0, 0, 0];
     _spottingScope setDir _direction;
     _spottingScope setPosASL _position;
     if ((getPosATL _spottingScope select 2) - (getPos _spottingScope select 2) < 1E-5) then {
-        _spottingScope setVectorUp (surfaceNormal (position _spottingScope)); 
+        _spottingScope setVectorUp (surfaceNormal (position _spottingScope));
     };
     _unit reveal _spottingScope;
-    
+
 }, [_unit], 1, 0] call EFUNC(common,waitAndExecute);

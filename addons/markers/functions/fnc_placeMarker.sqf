@@ -17,7 +17,7 @@
 #include "script_component.hpp"
 
 disableserialization;
-PARAMS_2(_display,_closeNum);
+params ["_display","_closeNum"];
 
 if (_closeNum == 1) then {
 

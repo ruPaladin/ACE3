@@ -18,7 +18,7 @@
 
 private ["_nearestPlayers"];
 
-PARAMS_2(_position,_radius);
+params ["_position","_radius"];
 
 _position = _this select 0;
 _radius = _this select 1;

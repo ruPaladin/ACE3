@@ -18,7 +18,7 @@
 #define __b 17.67
 #define __c 243.5
 
-PARAMS_2(_t,_rh);
+params ["_t","_rh"];
 
 if (_rh == 0) exitWith { CELSIUS(0) };
 

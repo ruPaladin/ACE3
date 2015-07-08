@@ -7,14 +7,14 @@
  * 0: Name (String)
  * 1: Arguments (Array)
  * 2: TTL (Number or Code) [Optional] for this specific event call
- * 
+ *
  * Return value:
  * Boolean of success
  */
 //#define DEBUG_MODE_FULL
 #include "script_component.hpp"
 
-PARAMS_2(_name,_args);
+params ["_name","_args"];
 
 private["_ttl", "_eventData"];
 

@@ -17,7 +17,7 @@
  */
 #include "script_component.hpp"
 
-PARAMS_2(_waypointName,_waypointPosASL);
+params ["_waypointName","_waypointPosASL"];
 
 private "_waypoints";
 

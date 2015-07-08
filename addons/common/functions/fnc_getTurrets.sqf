@@ -26,7 +26,7 @@ _turrets = [];
 _fnc_addTurret = {
     private ["_count", "_offset", "_index", "_path2", "_config2"];
 
-    PARAMS_2(_config,_path);
+    params ["_config","_path"];
 
     _config = _config >> "Turrets";
     _count = count _config;

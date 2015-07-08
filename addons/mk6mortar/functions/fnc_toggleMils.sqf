@@ -16,7 +16,7 @@
  */
 #include "script_component.hpp"
 
-PARAMS_2(_mortarVeh,_unit);
+params ["_mortarVeh","_unit"];
 
 private "_currentSetting";
 

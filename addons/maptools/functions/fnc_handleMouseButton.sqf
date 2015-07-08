@@ -15,7 +15,7 @@
 
 private ["_control", "_button", "_screenPos", "_shiftKey", "_ctrlKey", "_handled", "_pos", "_altKey", "_gui", "_marker"];
 
-PARAMS_2(_dir,_params);
+params ["_dir","_params"];
 _control   = _params select 0;
 _button    = _params select 1;
 _screenPos = [_params select 2, _params select 3];

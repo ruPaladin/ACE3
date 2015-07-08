@@ -16,7 +16,7 @@
  */
 #include "script_component.hpp"
 
-PARAMS_2(_unit,_team);
+params ["_unit","_team"];
 
 private ["_message"];
 

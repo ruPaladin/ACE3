@@ -20,7 +20,7 @@
 
 private ["_position", "_index"];
 
-PARAMS_2(_unit,_vehicle);
+params ["_unit","_vehicle"];
 
 _position = toLower (_this select 2);
 _index = _this select 3;  // optional, please don't use

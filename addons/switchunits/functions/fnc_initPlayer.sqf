@@ -17,7 +17,7 @@
 
 #include "script_component.hpp"
 
-PARAMS_2(_playerUnit,_sides);
+params ["_playerUnit","_sides"];
 
 if (vehicle _playerUnit == _playerUnit) then {
 

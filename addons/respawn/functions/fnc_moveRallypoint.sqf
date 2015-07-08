@@ -17,7 +17,7 @@
 
 #include "script_component.hpp"
 
-PARAMS_2(_unit,_side);
+params ["_unit","_side"];
 
 private ["_rallypoint", "_position"];
 

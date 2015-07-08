@@ -1,5 +1,5 @@
 #include "script_component.hpp"
-PARAMS_2(_target,_args);
+params ["_target","_args"];
 
 if(isNil "_target" || {isNull _target} || {!local _target} ) exitWith { false };
 

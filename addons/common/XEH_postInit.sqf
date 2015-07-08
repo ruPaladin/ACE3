@@ -26,7 +26,7 @@
 
 // Listens for global "SettingChanged" events, to update the force status locally
 ["SettingChanged", {
-    PARAMS_2(_name,_value);
+    params ["_name","_value"];
     if !(count _this > 2) exitWith {};
     private ["_force", "_settingData"];
     _force = _this select 2;

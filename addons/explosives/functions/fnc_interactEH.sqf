@@ -26,7 +26,7 @@ if ((vehicle ACE_player) != ACE_player) exitWith {};
 if (!("ACE_DefusalKit" in (items ACE_player))) exitWith {};
 
 [{
-    PARAMS_2(_args,_pfID);
+    params ["_args","_pfID"];
     EXPLODE_3_PVT(_args,_setPosition,_addedDefuseHelpers,_minesHelped);
 
     if (!EGVAR(interact_menu,keyDown)) then {

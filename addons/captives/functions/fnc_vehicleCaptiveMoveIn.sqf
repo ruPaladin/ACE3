@@ -16,7 +16,7 @@
  */
 #include "script_component.hpp"
 
-PARAMS_2(_target,_vehicle);
+params ["_target","_vehicle"];
 
 private ["_cargoIndex"];
 

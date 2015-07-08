@@ -18,7 +18,7 @@
 
 private ["_brightness"];
 
-PARAMS_2(_player,_changeInBrightness);
+params ["_player","_changeInBrightness"];
 
 _brightness = _player getVariable [QGVAR(NVGBrightness), 0];
 

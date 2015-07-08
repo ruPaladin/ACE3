@@ -16,7 +16,7 @@
  */
 #include "script_component.hpp"
 
-PARAMS_2(_unit,_vehicle);
+params ["_unit","_vehicle"];
 
 private ["_cargo", "_actions"];
 

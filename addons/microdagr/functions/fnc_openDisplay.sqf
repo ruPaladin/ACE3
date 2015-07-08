@@ -74,7 +74,7 @@ if ((_oldShowMode == DISPLAY_MODE_CLOSED) && {GVAR(currentShowMode) != DISPLAY_M
     //Start a pfeh to update display and handle hiding display
 
     [{
-        PARAMS_2(_args,_pfID);
+        params ["_args","_pfID"];
         EXPLODE_1_PVT(_args,_player);
         if ((isNull ace_player) || {!alive ace_player} || {ace_player != _player} || {!("ACE_microDAGR" in (items ace_player))} || {GVAR(currentShowMode) == DISPLAY_MODE_CLOSED}) then {
             //Close Display if still open:

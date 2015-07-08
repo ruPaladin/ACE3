@@ -99,7 +99,7 @@ _fnc_ladder_ladderDown = {
 };
 
 _fnc_ladder_conditional = {
-    PARAMS_2(_target,_player);
+    params ["_target","_player"];
     //(Check distance < 2) and (Don't show actions if on a ladder)
     ((_target distance _player) < 2) && {((getNumber (configFile >> "CfgMovesMaleSdr" >> "States" >> (animationState _player) >> "onLadder")) == 0)}
 };

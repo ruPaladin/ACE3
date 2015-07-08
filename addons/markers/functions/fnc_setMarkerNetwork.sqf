@@ -19,7 +19,7 @@
 
 private ["_config"];
 
-PARAMS_2(_marker,_data);
+params ["_marker","_data"];
 EXPLODE_4_PVT(_data,_markerClassname,_colorClassname,_markerPos,_markerDir);
 
 _config = (configfile >> "CfgMarkers") >> _markerClassname;

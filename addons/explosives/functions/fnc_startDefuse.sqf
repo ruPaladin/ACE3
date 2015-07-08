@@ -48,7 +48,7 @@ if (ACE_player != _unit) then {
         _unit disableAI "TARGET";
         _defuseTime = [[_unit] call EFUNC(Common,isEOD), _target] call _fnc_DefuseTime;
         [{
-            PARAMS_2(_unit,_target);
+            params ["_unit","_target"];
             [_unit, _target] call FUNC(defuseExplosive);
             _unit enableAI "MOVE";
             _unit enableAI "TARGET";

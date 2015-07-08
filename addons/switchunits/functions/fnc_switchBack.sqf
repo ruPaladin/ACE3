@@ -22,7 +22,7 @@ PARAMS_1(_originalPlayerUnit);
 [_originalPlayerUnit] joinSilent GVAR(OriginalGroup);
 
 DFUNC(pfhSwitchBack) = {
-    PARAMS_2(_args,_pfID);
+    params ["_args","_pfID"];
     EXPLODE_2_PVT(_args,_originalPlayerUnit,_currentUnit);
 
     if (local _originalPlayerUnit) exitWith {

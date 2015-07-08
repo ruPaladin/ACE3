@@ -12,7 +12,7 @@
 
 private ["_add", "_exists", "_map", "_lowestVolume"];
 
-PARAMS_2(_id,_settings);
+params ["_id","_settings"];
 
 _add = true;
 if (count _this > 2) then {

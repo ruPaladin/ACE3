@@ -18,7 +18,7 @@
 
 private ["_data", "_config"];
 
-PARAMS_2(_ctrl,_index);
+params ["_ctrl","_index"];
 _data = _ctrl lbValue _index;
 
 GVAR(curSelMarkerColor) = _index;

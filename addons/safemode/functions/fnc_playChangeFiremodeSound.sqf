@@ -1,7 +1,7 @@
 // by commy2
 #include "script_component.hpp"
 
-PARAMS_2(_unit,_weapon);
+params ["_unit","_weapon"];
 
 private ["_sound"];
 _sound = getArray (configFile >> "CfgWeapons" >> _weapon >> "changeFiremodeSound");

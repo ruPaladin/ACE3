@@ -15,14 +15,14 @@
  */
 #include "script_component.hpp"
 
-PARAMS_2(_tripod,_unit);
+params ["_tripod","_unit"];
 
 if ((_unit call CBA_fnc_getUnitAnim) select 0 == "stand") then {
     _unit playMove "AmovPercMstpSrasWrflDnon_diary";
 };
 
 [{
-    PARAMS_2(_tripod,_unit);
+    params ["_tripod","_unit"];
 
     [_unit, "ACE_Tripod"] call EFUNC(common,addToInventory);
     deleteVehicle _tripod;

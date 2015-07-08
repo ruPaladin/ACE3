@@ -26,7 +26,7 @@ if (!("ACE_wirecutter" in (items ace_player))) exitWith {};
 
 [{
     private ["_fncStatement", "_attachedFence", "_fncCondition", "_helper", "_action"];
-    PARAMS_2(_args,_pfID);
+    params ["_args","_pfID"];
     EXPLODE_3_PVT(_args,_setPosition,_addedHelpers,_fencesHelped);
 
     if (!EGVAR(interact_menu,keyDown)) then {

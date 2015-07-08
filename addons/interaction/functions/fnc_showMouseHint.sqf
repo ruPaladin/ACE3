@@ -22,7 +22,7 @@
 
 private ["_scroll", "_display"];
 
-PARAMS_2(_leftClick,_rightClick);
+params ["_leftClick","_rightClick"];
 _scroll = "";
 if (count _this > 2) then {
     _scroll = _this select 2;

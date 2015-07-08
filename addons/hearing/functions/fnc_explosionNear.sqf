@@ -16,7 +16,7 @@
  */
 #include "script_component.hpp"
 
-PARAMS_2(_unit,_damage);
+params ["_unit","_damage"];
 
 private ["_strength"];
 _strength = 0 max _damage;

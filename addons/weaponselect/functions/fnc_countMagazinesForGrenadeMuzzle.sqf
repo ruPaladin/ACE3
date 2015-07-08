@@ -12,7 +12,7 @@
  */
 #include "script_component.hpp"
 
-PARAMS_2(_unit,_muzzle);
+params ["_unit","_muzzle"];
 
 private ["_uniformMags", "_vestMags", "_backpackMags", "_numberOfMagazines", "_magazineClasses", "_firstMagazine"];
 

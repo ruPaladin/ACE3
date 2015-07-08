@@ -18,7 +18,7 @@
 
 private ["_direction"];
 
-PARAMS_2(_ctrl,_data);
+params ["_ctrl","_data"];
 
 _direction = round _data;
 if (_direction < 0) then {

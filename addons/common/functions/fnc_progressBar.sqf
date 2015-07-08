@@ -49,7 +49,7 @@ _ctrlPos set [1, ((0 + 29 * GVAR(SettingProgressBarLocation)) * ((((safezoneW / 
 
 
 _perFrameFunction = {
-    PARAMS_2(_parameters,_pfhID);
+    params ["_parameters","_pfhID"];
     EXPLODE_8_PVT(_parameters,_args,_onFinish,_onFail,_condition,_player,_startTime,_totalTime,_exceptions);
     private ["_elapsedTime", "_errorCode"];
 

@@ -18,7 +18,7 @@
  */
 #include "script_component.hpp"
 
-PARAMS_2(_house,_door);
+params ["_house","_door"];
 
 private ["_index", "_animations", "_lockedVariable"];
 

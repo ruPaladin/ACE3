@@ -16,23 +16,23 @@
  */
 #include "script_component.hpp"
 
-PARAMS_2(_sandbag,_unit);
+params ["_sandbag","_unit"];
 
 _unit playActionNow "PutDown";
 
 _unit setVariable [QGVAR(usingSandbag), true];
 [{
-    PARAMS_2(_sandbag,_unit);
-    
+    params ["_sandbag","_unit"];
+
     GVAR(carrier) = ACE_player;
-    
+
     [GVAR(carrier), "ACE_Sandbag", true] call EFUNC(common,setForceWalkStatus);
-    
+
     deleteVehicle _sandbag;
-    
+
     GVAR(sandBag) = createVehicle ["ACE_SandbagObject_NoGeo", [0,0,0], [], 0, "NONE"];
     GVAR(sandBag) enableSimulationGlobal false;
-    
+
     // Force physx update
     {
         _x setPosASL (getPosASL _x);

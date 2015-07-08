@@ -27,7 +27,7 @@
     "\A3\Ui_f\data\GUI\Cfg\Ranks\colonel_gs.paa" \
     ]
 
-PARAMS_2(_caller,_target);
+params ["_caller","_target"];
 private "_display";
 
 //Sanity Checks

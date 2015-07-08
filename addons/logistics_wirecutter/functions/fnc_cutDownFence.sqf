@@ -19,7 +19,7 @@
 #define SOUND_CLIP_TIME_SPACEING    1.5
 private ["_timeToCut", "_progressCheck"];
 
-PARAMS_2(_unit,_fenceObject);
+params ["_unit","_fenceObject"];
 if (_unit != ACE_player) exitWith {};
 
 _timeToCut = if ([ACE_player] call EFUNC(common,isEngineer)) then {7.5} else {11};
@@ -27,7 +27,7 @@ _timeToCut = if ([ACE_player] call EFUNC(common,isEngineer)) then {7.5} else {11
 [ACE_player, "AinvPknlMstpSnonWnonDr_medic5", 0] call EFUNC(common,doAnimation);
 
 _progressCheck = {
-    PARAMS_2(_args,_passedTime);
+    params ["_args","_passedTime"];
     EXPLODE_2_PVT(_args,_fenceObject,_lastSoundEffectTime);
     if (_passedTime > (_lastSoundEffectTime + SOUND_CLIP_TIME_SPACEING)) then {
         // playSound "ACE_wirecutter_sound";

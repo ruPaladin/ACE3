@@ -3,7 +3,7 @@
 
 private ["_sound"];
 
-PARAMS_2(_unit,_weapon);
+params ["_unit","_weapon"];
 
 _sound = getArray (configFile >> "CfgWeapons" >> _weapon >> "changeFiremodeSound");
 

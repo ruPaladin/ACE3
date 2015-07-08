@@ -1,23 +1,23 @@
 /*
   Name: ACE_Respawn_fnc_removeBody
-  
+
   Author(s):
     bux578
-  
+
   Description:
     Restores previously saved gear
-  
+
   Parameters:
     0: OBJECT - unit
     1: ARRAY<STRING> - Array containing all gear
-  
+
   Returns:
     VOID
 */
 
 #include "script_component.hpp"
 
-PARAMS_2(_unit,_allGear);
+params ["_unit","_allGear"];
 
 private ["_unit", "_allGear", "_headgear", "_goggles", "_uniform", "_uniformitems", "_vest", "_vestitems", "_backpack", "_backpackitems", "_primaryweapon", "_primaryweaponitems", "_primaryweaponmagazine", "_handgunweapon", "_handgunweaponitems", "_handgunweaponmagazine", "_assigneditems", "_binocular", "_backpa", "_secondaryweapon", "_secondaryweaponitems", "_secondaryweaponmagazine"];
 

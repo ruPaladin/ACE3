@@ -24,7 +24,7 @@
 #define __C7 0.000687678
 #define __C8  0.000274954
 
-PARAMS_2(_t,_rh);
+params ["_t","_rh"];
 
 // Source: https://en.wikipedia.org/wiki/Heat_index
 

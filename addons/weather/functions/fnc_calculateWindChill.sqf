@@ -14,7 +14,7 @@
  */
 #include "script_component.hpp"
 
-PARAMS_2(_t,_v);
+params ["_t","_v"];
 
 // Source: https://en.wikipedia.org/wiki/Wind_chill
 

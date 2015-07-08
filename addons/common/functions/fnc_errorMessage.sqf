@@ -31,7 +31,7 @@ if (isNull (call BIS_fnc_displayMission)) exitWith {
 
 private ["_onOK", "_onCancel"];
 
-PARAMS_2(_textHeader,_textMessage);
+params ["_textHeader","_textMessage"];
 _onOK = ARR_SELECT(_this,2,{});
 _onCancel = ARR_SELECT(_this,3,{});
 

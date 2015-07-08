@@ -16,7 +16,7 @@
  */
 #include "script_component.hpp"
 
-PARAMS_2(_seat,_player);
+params ["_seat","_player"];
 
 // Sitting enabled, is seat object and not occupied
 (GVAR(enable) && {getNumber (configFile >> "CfgVehicles" >> typeOf _seat >> QGVAR(canSit)) == 1} && {isNil{_seat getVariable QGVAR(seatOccupied)}})

@@ -16,7 +16,7 @@
  */
 #include "script_component.hpp"
 
-PARAMS_2(_unit,_state);
+params ["_unit","_state"];
 
 
 if (!local _unit) exitwith {
@@ -52,7 +52,7 @@ if (_state) then {
             //If we get a change in animation then redo the animation (handles people vaulting to break the animation chain)
             private "_animChangedEHID";
             _animChangedEHID = _unit addEventHandler ["AnimChanged", {
-                PARAMS_2(_unit,_newAnimation);
+                params ["_unit","_newAnimation"];
                 if ((_newAnimation != "ACE_AmovPercMstpSsurWnonDnon") && {!(_unit getVariable ["ACE_isUnconscious", false])}) then {
                     TRACE_1("Handcuff animation interrupted",_newAnimation);
                     [_unit, "ACE_AmovPercMstpScapWnonDnon", 1] call EFUNC(common,doAnimation);

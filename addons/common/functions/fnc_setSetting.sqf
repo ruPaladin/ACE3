@@ -19,7 +19,7 @@
 
 private ["_force", "_settingData","_failed"];
 
-PARAMS_2(_name,_value);
+params ["_name","_value"];
 
 private ["_force"];
 _force = false;

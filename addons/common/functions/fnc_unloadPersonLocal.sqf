@@ -16,7 +16,7 @@
 #define GROUP_SWITCH_ID QUOTE(FUNC(loadPerson))
 
 private ["_loaded", "_emptyPos"];
-PARAMS_2(_unit,_vehicle);
+params ["_unit","_vehicle"];
 
 if (driver _vehicle == _unit) exitwith {TRACE_1("Exiting on Failed Driver Check", driver _vehicle == _unit); false;};
 TRACE_1("Vehicle Check", driver _vehicle == _unit);
@@ -32,7 +32,7 @@ TRACE_1("Ejecting", alive _unit);
 _unit action ["Eject", vehicle _unit];
 [ {
     private "_anim";
-    PARAMS_2(_unit,_emptyPos);
+    params ["_unit","_emptyPos"];
     _unit setPosASL (_emptyPos call EFUNC(common,PositiontoASL));
     if (!([_unit] call FUNC(isAwake))) then {
         TRACE_1("Check if isAwake", [_unit] call FUNC(isAwake));

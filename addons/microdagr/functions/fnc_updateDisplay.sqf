@@ -62,7 +62,7 @@ case (APP_MODE_INFODISPLAY): {
         (_display displayCtrl IDC_MODEDISPLAY_HEADINGNUM) ctrlSetText _compassAngleText;
 
         //Speed:
-        (_display displayCtrl IDC_MODEDISPLAY_SPEEDNUM) ctrlSetText format ["%1kph", (round (speed (vehicle ace_player)))];;
+        (_display displayCtrl IDC_MODEDISPLAY_SPEEDNUM) ctrlSetText format ["%1kph", (round (speed (vehicle ace_player)))];
 
 
         if (GVAR(currentWaypoint) == -1) then {
@@ -121,7 +121,7 @@ case (APP_MODE_COMPASS): {
         (_display displayCtrl IDC_MODECOMPASS_HEADING) ctrlSetText _compassAngleText;
 
         //Speed:
-        _SpeedText = format ["%1kph", (round (speed (vehicle ace_player)))];;
+        _SpeedText = format ["%1kph", (round (speed (vehicle ace_player)))];
         (_display displayCtrl IDC_MODECOMPASS_SPEED) ctrlSetText _SpeedText;
 
         if (GVAR(currentWaypoint) == -1) then {

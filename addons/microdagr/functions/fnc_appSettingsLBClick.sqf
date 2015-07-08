@@ -17,7 +17,7 @@
 #include "script_component.hpp"
 
 disableSerialization;
-PARAMS_2(_control,_itemClicked);
+params ["_control","_itemClicked"];
 
 switch (_itemClicked) do {
     case (0): { GVAR(settingUseMils) = ! GVAR(settingUseMils)};

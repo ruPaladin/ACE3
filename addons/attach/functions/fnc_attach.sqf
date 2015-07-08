@@ -63,7 +63,7 @@ if (_unit == _attachToVehicle) then {  //Self Attachment
 
     [{
         private "_startingPosition";
-        PARAMS_2(_args,_pfID);
+        params ["_args","_pfID"];
         EXPLODE_7_PVT(_args,_unit,_attachToVehicle,_itemClassname,_itemVehClass,_tempObject,_onAtachText,_actionID);
 
         if ((GVAR(placeAction) != -1) ||
@@ -84,7 +84,7 @@ if (_unit == _attachToVehicle) then {  //Self Attachment
             };
             deleteVehicle _tempObject;
         } else {
-            _tempObject setPosATL ((ASLtoATL eyePos _unit) vectorAdd (positionCameraToWorld [0,0,1] vectorDiff positionCameraToWorld [0,0,0]));;
+            _tempObject setPosATL ((ASLtoATL eyePos _unit) vectorAdd (positionCameraToWorld [0,0,1] vectorDiff positionCameraToWorld [0,0,0]));
         };
     }, 0, [_unit, _attachToVehicle, _itemClassname, _itemVehClass, _tempObject, _onAtachText, _actionID]] call CBA_fnc_addPerFrameHandler;
 };

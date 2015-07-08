@@ -13,7 +13,7 @@
 #include "script_component.hpp"
 //IGNORE_PRIVATE_WARNING("_handleNetEvent");
 
-PARAMS_2(_eventName,_eventArgs);
+params ["_eventName","_eventArgs"];
 
     #ifdef DEBUG_EVENTS
         diag_log text format[ARR_2("* Server Event: %1",_eventName)];

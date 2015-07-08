@@ -16,7 +16,7 @@
  */
 #include "script_component.hpp"
 
-PARAMS_2(_caller,_target);
+params ["_caller","_target"];
 
 private ["_onFinish", "_onFailure"];
 

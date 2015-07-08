@@ -18,7 +18,7 @@
 
 private ["_chargeText", "_xPos", "_yPos", "_wPos", "_hPos", "_tubeWeaponName", "_fireModes"];
 
-PARAMS_2(_player,_newVehicle);
+params ["_player","_newVehicle"];
 
 if (isNull _newVehicle) exitWith {};
 if (!(_newVehicle isKindOf "Mortar_01_base_F")) exitWith {};
@@ -37,7 +37,7 @@ _tubeWeaponName = (weapons _newVehicle) select 0;
 _fireModes = getArray (configFile >> "CfgWeapons" >> _tubeWeaponName >> "modes");
 
 [{
-    PARAMS_2(_args,_pfID);
+    params ["_args","_pfID"];
     EXPLODE_3_PVT(_args,_mortarVeh,_chargeText,_fireModes);
 
     if ((vehicle ACE_player) != _mortarVeh) then {

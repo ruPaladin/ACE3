@@ -169,7 +169,7 @@ if (_holderIsEmpty) then {
 [{
     private ["_needToRemoveWeapon", "_needToRemoveMagazines", "_needToRemoveBackpack", "_needToRemoveVest", "_needToRemoveUniform", "_error", "_magsToPickup", "_index", "_magazinesInHolder"];
 
-    PARAMS_2(_args,_pfID);
+    params ["_args","_pfID"];
     EXPLODE_8_PVT(_args,_caller,_target,_listOfItemsToRemove,_holder,_holderIsEmpty,_maxWaitTime,_doNotDropAmmo,_startingMagazines);
 
     _needToRemoveWeapon = ({_x in _listOfItemsToRemove} count (weapons _target)) > 0;

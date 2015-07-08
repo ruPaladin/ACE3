@@ -14,7 +14,7 @@
 
 #include "script_component.hpp"
 
-PARAMS_2(_caller,_target);
+params ["_caller","_target"];
 
 private ["_position", "_headPos", "_spinePos", "_dirVect", "_direction", "_bodyBag"];
 

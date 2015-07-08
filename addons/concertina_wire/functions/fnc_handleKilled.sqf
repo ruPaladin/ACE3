@@ -15,9 +15,9 @@
  */
 #include "script_component.hpp"
 
-PARAMS_2(_wire,_killer);
+params ["_wire","_killer"];
 
-if (isNull _killer) then {    
+if (isNull _killer) then {
     _killer = _wire getVariable ["ace_concertina_wire_lastDamager", objNull];
     if (isNull _killer) then {
         _killer = nearestObject [_wire, "car"];
@@ -90,16 +90,16 @@ if (_mode == 0) then {
 if (_mode == 1) then {
     switch (true) do {
         case (_vehicle isKindOf "Tank"): {
-            _parts = ["ltrack","rtrack"];		
+            _parts = ["ltrack","rtrack"];
         };
         case (_vehicle isKindOf "Wheeled_APC" || {_vehicle isKindOf "Car"}): {
-            _parts = ["lfwheel","lf2wheel","lmwheel","lbwheel","rfwheel","rf2wheel","rmwheel","rbwheel"];		
+            _parts = ["lfwheel","lf2wheel","lmwheel","lbwheel","rfwheel","rf2wheel","rmwheel","rbwheel"];
         };
     };
 } else {
     switch (true) do {
         case (_vehicle isKindOf "Wheeled_APC" || {_vehicle isKindOf "Car"}): {
-            _parts = ["lfwheel","lf2wheel","lmwheel","lbwheel","rfwheel","rf2wheel","rmwheel","rbwheel"];		
+            _parts = ["lfwheel","lf2wheel","lmwheel","lbwheel","rfwheel","rf2wheel","rmwheel","rbwheel"];
         };
     };
 };
@@ -118,15 +118,15 @@ if (canMove _vehicle) then {
 if (_mode == 1) then {
     if (_vehicle isKindOf "StaticWeapon") exitWith {};
     [{
-        PARAMS_2(_vehicle,_wire);
-        
+        params ["_vehicle","_wire"];
+
         _vehicle setVelocity ((velocity _vehicle) vectorMultiply 0.75);
-        
+
         private ["_vPos", "_vDir"];
         // Set vehicle back in front of wire, since the wire will make the vehicle jump, and a wire with no geometry lod is undestructible and not recognizeable
         _vPos = getPosASL _vehicle;
         _vDir = getDir _vehicle;
-        _vehicle setPosASL (_vPos vectorAdd [-0.35 * sin(_vDir), -0.35 * cos(_vDir), 0]); 
+        _vehicle setPosASL (_vPos vectorAdd [-0.35 * sin(_vDir), -0.35 * cos(_vDir), 0]);
         // TODO: Needs to be placed in safe distance to wire, so we do not constantly re-spawn new wires
     }, [_vehicle, _wire], 0.1, 0] call EFUNC(common,waitAndExecute);
 };

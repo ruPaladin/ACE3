@@ -62,7 +62,7 @@ if (_newMuzzleVelocityCoefficent != 1) then {
 
 [{
     private ["_deltaT", "_bulletVelocity", "_bulletSpeed", "_trueVelocity", "_trueSpeed", "_dragRef", "_accelRef", "_drag", "_accel"];
-    PARAMS_2(_args,_pfID);
+    params ["_args","_pfID"];
     EXPLODE_4_PVT(_args,_shell,_airFriction,_time,_relativeDensity);
 
     if (isNull _shell || {!alive _shell}) exitwith {

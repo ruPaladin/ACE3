@@ -17,7 +17,7 @@
 #include "script_component.hpp"
 
 disableSerialization;
-PARAMS_2(_listBoxCtrl,_itemsCountArray);
+params ["_listBoxCtrl","_itemsCountArray"];
 
 private ["_classname", "_count", "_displayName", "_picture"];
 

@@ -14,7 +14,7 @@
 
 if !(GVAR(DisplayText)) exitwith {};
 
-PARAMS_2(_magazine,_numberofMagazines);
+params ["_magazine","_numberofMagazines"];
 
 private ["_color", "_name", "_text", "_picture"];
 

@@ -27,7 +27,7 @@ if ((vehicle ACE_player) != ACE_player) exitWith {};
 
 [{
     private ["_nearBuidlings", "_typeOfHouse", "_houseBeingScaned", "_actionSet", "_memPoints", "_memPointsActions", "_helperPos", "_helperObject"];
-    PARAMS_2(_args,_pfID);
+    params ["_args","_pfID"];
     EXPLODE_4_PVT(_args,_setPosition,_addedHelpers,_housesScaned,_housesToScanForActions);
 
     if (!EGVAR(interact_menu,keyDown)) then {

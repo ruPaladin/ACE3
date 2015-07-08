@@ -18,7 +18,7 @@
 
 if (GVAR(DisableEarRinging)) exitWith {};
 
-PARAMS_2(_unit,_strength);
+params ["_unit","_strength"];
 
 if (isNull _unit) exitWith {};
 if (_strength < 0.05) exitWith {};

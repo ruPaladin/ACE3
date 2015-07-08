@@ -16,7 +16,7 @@
  */
 #include "script_component.hpp"
 
-PARAMS_2(_attachToVehicle,_unit);
+params ["_attachToVehicle","_unit"];
 
 private ["_attachedObjects", "_inRange"];
 

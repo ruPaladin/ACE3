@@ -38,7 +38,7 @@ if (isNull _display) exitWith {};
 
 _fnc_hideControl = {
     private "_idc";
-    PARAMS_2(_path,_hideCtrl);
+    params ["_path","_hideCtrl"];
     _idc = getNumber (_path >> "IDC");
     _pos = [];
     if (_hideCtrl) then {

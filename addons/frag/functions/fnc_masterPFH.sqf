@@ -4,14 +4,14 @@
  * Master single PFH abstraction for all rounds being tracked by frag/spall
  *
  * Arguments:
- * 
+ *
  *
  * Return Value:
  * None
  */
 //#define DEBUG_MODE_FULL
 #include "script_component.hpp"
-//PARAMS_2(_pfhArgs,_handle);
+//params ["_pfhArgs","_handle"];
 
 if (!GVAR(enabled)) exitWith {};
 
@@ -25,13 +25,13 @@ while { (count GVAR(objects)) > 0 &&  { _iter < GVAR(MaxTrackPerFrame) } } do {
         GVAR(lastIterationIndex) = 0;
     };
     _object = GVAR(objects) select GVAR(lastIterationIndex);
-    
+
     if(!isNil "_object") then {
         if(isNull _object) then {
             _gcIndex pushBack GVAR(lastIterationIndex);
         } else {
             _args = GVAR(arguments) select GVAR(lastIterationIndex);
-            
+
             if(!(_args call FUNC(pfhRound))) then {
                 _gcIndex pushBack GVAR(lastIterationIndex);    // Add it to the GC if it returns false
             };
@@ -53,6 +53,6 @@ _deletionCount = 0;
     _deleteIndex = _x - _deletionCount;
     GVAR(objects) deleteAt _deleteIndex;
     GVAR(arguments) deleteAt _deleteIndex;
-    
+
     _deletionCount = _deletionCount + 1;
 } forEach _gcIndex;
