@@ -18,7 +18,7 @@
 disableSerialization;
 
 params ["_player"];
-DEFAULT_PARAM(1,_display,(findDisplay 602));
+_display = param [1,(findDisplay 602]);
 
 _player removeMagazines "ACE_PreloadedMissileDummy";
 _player removeMagazines "ACE_FiredMissileDummy";

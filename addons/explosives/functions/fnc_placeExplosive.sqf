@@ -23,7 +23,7 @@
 #include "script_component.hpp"
 private ["_ammo", "_explosive", "_attachedTo", "_expPos", "_magazineTrigger"];
 EXPLODE_6_PVT(_this,_unit,_pos,_dir,_magazineClass,_triggerConfig,_triggerSpecificVars);
-DEFAULT_PARAM(6,_setupPlaceholderObject,objNull);
+_setupPlaceholderObject = param [6,objNull];
 
 _unit playActionNow "PutDown";
 

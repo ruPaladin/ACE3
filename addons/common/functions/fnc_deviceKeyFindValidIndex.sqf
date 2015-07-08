@@ -16,7 +16,7 @@
  */
 #include "script_component.hpp"
 
-DEFAULT_PARAM(0,_searchOffsetOrName,0);
+_searchOffsetOrName = param [0,0];
 
 private ["_validIndex", "_offsetBy", "_realIndex", "_offset"];
 

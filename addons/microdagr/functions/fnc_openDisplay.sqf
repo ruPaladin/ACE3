@@ -17,7 +17,7 @@
 
 private ["_oldShowMode", "_args", "_pfID", "_player"];
 
-DEFAULT_PARAM(0,_newDisplayShowMode,-1);
+_newDisplayShowMode = param [0,-1];
 _oldShowMode = GVAR(currentShowMode);
 
 if (_newDisplayShowMode == -1) then {

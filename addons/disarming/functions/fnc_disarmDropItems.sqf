@@ -24,7 +24,7 @@ private ["_fncSumArray", "_return", "_holder", "_dropPos", "_targetMagazinesStar
 
 
 params ["_caller","_target","_listOfItemsToRemove"];
-DEFAULT_PARAM(3,_doNotDropAmmo,false); //By default units drop all weapon mags when dropping a weapon
+_doNotDropAmmo = param [3,false]; //By default units drop all weapon mags when dropping a weapon
 
 _fncSumArray = {
     _return = 0;

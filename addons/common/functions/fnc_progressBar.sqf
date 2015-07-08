@@ -23,9 +23,9 @@
 #include "script_component.hpp"
 
 params ["_totalTime","_args","_onFinish","_onFail"];
-DEFAULT_PARAM(4,_localizedTitle,"");
-DEFAULT_PARAM(5,_condition,{true});
-DEFAULT_PARAM(6,_exceptions,[]);
+_localizedTitle = param [4,""];
+_condition = param [5,{true}];
+_exceptions = param [6,[]];
 private ["_player", "_perFrameFunction", "_ctrlPos"];
 
 _player = ACE_player;

@@ -17,7 +17,7 @@
 #include "script_component.hpp"
 
 params ["_unit"];
-DEFAULT_PARAM(1,_target,objNull);
+_target = param [1,objNull];
 
 if (isNull _target) then {
     _target = _unit getVariable [QGVAR(escortedUnit), objNull];

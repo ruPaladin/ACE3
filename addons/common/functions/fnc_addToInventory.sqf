@@ -20,8 +20,8 @@
 #include "script_component.hpp"
 
 params ["_unit","_classname"];
-DEFAULT_PARAM(2,_container,"");
-DEFAULT_PARAM(3,_ammoCount,-1);
+_container = param [2,""];
+_ammoCount = param [3,-1];
 
 private ["_addedToPlayer", "_canAdd", "_type", "_pos"];
 

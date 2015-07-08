@@ -17,7 +17,7 @@
 #include "script_component.hpp"
 
 private ["_settingsMenu", "_ctrlList", "_settingsText", "_color", "_settingsColor", "_updateKeyView", "_settingsValue"];
-DEFAULT_PARAM(0,_updateKeyView,true);
+_updateKeyView = param [0,true];
 
 disableSerialization;
 _settingsMenu = uiNamespace getVariable 'ACE_settingsMenu';
