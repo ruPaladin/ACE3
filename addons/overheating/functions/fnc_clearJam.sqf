@@ -14,7 +14,7 @@
  */
 #include "\z\ace\addons\overheating\script_component.hpp"
 
-EXPLODE_3_PVT(_this,_unit,_weapon,_skipAnim);
+params ["_unit","_weapon","_skipAnim"];
 
 private ["_jammedWeapons"];
 _jammedWeapons = _unit getVariable [QGVAR(jammedWeapons), []];

@@ -18,7 +18,7 @@
 #include "script_component.hpp"
 private ["_config"];
 
-EXPLODE_3_PVT(_this,_explosive,_magazine,_trigger);
+params ["_explosive","_magazine","_trigger"];
 _config = ConfigFile >> "ACE_Triggers" >> _trigger;
 
 // If the onSetup function returns true, it is handled elsewhere

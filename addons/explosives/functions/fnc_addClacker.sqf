@@ -18,7 +18,7 @@
  */
 #include "script_component.hpp"
 private ["_clacker", "_config", "_requiredItems", "_hasRequired", "_detonators"];
-EXPLODE_3_PVT(_this,_unit,_explosive,_magazineClass);
+params ["_unit","_explosive","_magazineClass"];
 // Config is the last item in the list of passed in items.
 _config = (_this select 3) select (count (_this select 3) - 1);
 

@@ -14,7 +14,7 @@
  */
 #include "\z\ace\addons\overheating\script_component.hpp"
 
-EXPLODE_3_PVT(_this,_temperature,_barrelMass,_totalTime);
+params ["_temperature","_barrelMass","_totalTime"];
 
 // If a long ACE_time passed since the last shot, there's no need to calculate anything; the weapon should be cool
 if (_totalTime > 1800) exitWith {0};

@@ -19,7 +19,7 @@ private ["_isEnclosed","_nearObjects","_light","_ll","_flashlight", "_flareTint"
 
 // Blend two colors
 _fnc_blendColor = {
-    EXPLODE_3_PVT(_this,_c1,_c2,_alpha);
+    params ["_c1","_c2","_alpha"];
     [(_c1 select 0) * (1 - _alpha) + (_c2 select 0) * _alpha,
      (_c1 select 1) * (1 - _alpha) + (_c2 select 1) * _alpha,
      (_c1 select 2) * (1 - _alpha) + (_c2 select 2) * _alpha,

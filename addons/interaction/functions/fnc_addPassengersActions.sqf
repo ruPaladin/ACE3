@@ -17,7 +17,7 @@
  */
 #include "script_component.hpp"
 
-EXPLODE_3_PVT(_this,_vehicle,_player,_parameters);
+params ["_vehicle","_player","_parameters"];
 
 private ["_actions"];
 _actions = [];

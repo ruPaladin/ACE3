@@ -16,7 +16,7 @@
  * Public: Yes
  */
 #include "script_component.hpp"
-EXPLODE_3_PVT(_this,_explosive,_direction,_pitch);
+params ["_explosive","_direction","_pitch"];
 _explosive setDir _direction;
 if (_pitch != 0) then {
     [_explosive, _pitch, 0] call CALLSTACK(BIS_fnc_setPitchBank);

@@ -20,7 +20,7 @@
 
 if !(isServer) exitWith {};
 
-EXPLODE_3_PVT(_this,_logic,_units,_activated);
+params ["_logic","_units","_activated"];
 
 if !(_activated) exitWith {};
 

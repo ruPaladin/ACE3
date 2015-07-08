@@ -26,7 +26,7 @@ if !(hasInterface) exitWith {};
 
 // Listen for attempts to link ammo
 ["linkedAmmo", {
-    EXPLODE_3_PVT(_this,_receiver,_giver,_magazine);
+    params ["_receiver","_giver","_magazine"];
     diag_log "linkedAmmo";
     diag_log _this;
 
@@ -61,7 +61,7 @@ if !(hasInterface) exitWith {};
 
 // Listen for returned magazines
 ["returnedAmmo", {
-    EXPLODE_3_PVT(_this,_receiver,_giver,_magazine);
+    params ["_receiver","_giver","_magazine"];
     diag_log "returnedAmmo";
     diag_log _this;
 

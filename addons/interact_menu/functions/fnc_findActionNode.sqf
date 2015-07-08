@@ -31,7 +31,7 @@ _parentNode = [[],_actionTreeList];
 _foundParentNode = false;
 
 _fnc_findFolder = {
-    EXPLODE_3_PVT(_this,_parentPath,_level,_actionNode);
+    params ["_parentPath","_level","_actionNode"];
 
     {
         EXPLODE_2_PVT(_x,_actionData,_actionChildren);

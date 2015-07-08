@@ -20,7 +20,7 @@
  */
 #include "script_component.hpp"
 private ["_result", "_ignoreRange", "_helpers", "_pos"];
-EXPLODE_3_PVT(_this,_unit,_range,_item);
+params ["_unit","_range","_item"];
 _ignoreRange = (_range == -1);
 _result = true;
 

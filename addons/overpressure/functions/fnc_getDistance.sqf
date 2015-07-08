@@ -13,7 +13,7 @@
  */
 #include "script_component.hpp"
 
-EXPLODE_3_PVT(_this,_posASL,_direction,_maxDistance);
+params ["_posASL","_direction","_maxDistance"];
 
 private ["_distance", "_interval", "_line", "_intersections", "_terrainIntersect", "_lastTerrainIntersect"];
 
