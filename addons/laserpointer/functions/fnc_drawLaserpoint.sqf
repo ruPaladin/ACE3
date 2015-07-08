@@ -16,7 +16,7 @@ private ["_p0", "_p1", "_p0Pos", "_offV1", "_offV2", "_offV3", "_camPos", "_inte
     GVAR(laserdot) = _light;
 };*/
 
-EXPLODE_4_PVT(_this,_unit,_range,_isGreen,_brightness);
+params ["_unit","_range","_isGreen","_brightness"];
 
 _p0Pos = _unit modelToWorldVisual (_unit selectionPosition "righthand");
 

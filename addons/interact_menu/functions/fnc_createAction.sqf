@@ -26,7 +26,7 @@
  */
 #include "script_component.hpp"
 
-EXPLODE_5_PVT(_this,_actionName,_displayName,_icon,_statement,_condition);
+params ["_actionName","_displayName","_icon","_statement","_condition"];
 
 // IGNORE_PRIVATE_WARNING(_target);
 private ["_insertChildren","_customParams","_position","_distance","_params", "_modifierFunction"];

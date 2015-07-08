@@ -18,7 +18,7 @@
 //#define DEBUG_MODE_FULL
 #include "script_component.hpp"
 
-EXPLODE_7_PVT(_this,_firer,_weapon,_muzzle,_mode,_ammo,_magazine,_projectile);
+params ["_firer","_weapon","_muzzle","_mode","_ammo","_magazine","_projectile"];
 
 // Prevent AI from causing backblast damage
 if !([_firer] call EFUNC(common,isPlayer)) exitWith {};

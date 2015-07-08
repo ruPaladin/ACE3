@@ -18,7 +18,7 @@
  */
 #include "script_component.hpp"
 
-EXPLODE_4_PVT(_this,_unit,_explosive,_magazineClass,_extra);
+params ["_unit","_explosive","_magazineClass","_extra"];
 
 private["_config", "_detonators", "_hasRequired", "_requiredItems", "_code", "_count", "_codeSet"];
 

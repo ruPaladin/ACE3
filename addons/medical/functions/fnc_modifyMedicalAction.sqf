@@ -17,7 +17,7 @@
 
 #include "script_component.hpp"
 
-EXPLODE_4_PVT(_this,_target,_player,_selectionN,_actionData);
+params ["_target","_player","_selectionN","_actionData"];
 if (GVAR(level) < 2) exitwith {
     private ["_pointDamage"];
     _pointDamage = _target getHitPointDamage (["HitHead", "HitBody", "HitLeftArm", "HitRightArm", "HitLeftLeg", "HitRightLeg"] select _selectionN);

@@ -15,7 +15,7 @@
  */
 #include "script_component.hpp"
 
-EXPLODE_4_PVT(_this,_unit,_elevation,_windage,_zero);
+params ["_unit","_elevation","_windage","_zero"];
 
 private ["_adjustmentDifference", "_pitchbankyaw", "_pitch", "_bank", "_yaw", "_adjustment", "_weaponIndex"];
 

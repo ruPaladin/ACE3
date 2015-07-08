@@ -14,7 +14,7 @@
  */
 #include "script_component.hpp"
 
-EXPLODE_4_PVT(_this,_firer,_posASL,_direction,_weapon);
+params ["_firer","_posASL","_direction","_weapon"];
 
 private ["_overpressureAngle", "_overpressureRange", "_overpressureDamage"];
 
