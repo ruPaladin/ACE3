@@ -22,10 +22,7 @@
 
 #include "script_component.hpp"
 
-params ["_totalTime","_args","_onFinish","_onFail"];
-_localizedTitle = param [4,""];
-_condition = param [5,{true}];
-_exceptions = param [6,[]];
+params ["_totalTime","_args","_onFinish","_onFail",["_localizedTitle",""],["_condition",{true}],["_exceptions",[]]];
 private ["_player", "_perFrameFunction", "_ctrlPos"];
 
 _player = ACE_player;

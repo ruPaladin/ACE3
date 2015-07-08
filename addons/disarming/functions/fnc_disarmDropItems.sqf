@@ -20,11 +20,8 @@
 
 #define TIME_MAX_WAIT 5
 
+params ["_caller","_target","_listOfItemsToRemove",["_doNotDropAmmo",false]]; //By default units drop all weapon mags when dropping a weapon
 private ["_fncSumArray", "_return", "_holder", "_dropPos", "_targetMagazinesStart", "_holderMagazinesStart", "_xClassname", "_xAmmo", "_targetMagazinesEnd", "_holderMagazinesEnd", "_holderItemsStart", "_targetItemsStart", "_addToCrateClassnames", "_addToCrateCount", "_index", "_holderItemsEnd", "_targetItemsEnd", "_holderIsEmpty"];
-
-
-params ["_caller","_target","_listOfItemsToRemove"];
-_doNotDropAmmo = param [3,false]; //By default units drop all weapon mags when dropping a weapon
 
 _fncSumArray = {
     _return = 0;

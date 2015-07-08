@@ -19,10 +19,7 @@
 //#define DEBUG_MODE_FULL
 #include "script_component.hpp"
 
-params ["_unit","_classname"];
-_container = param [2,""];
-_ammoCount = param [3,-1];
-
+params ["_unit","_classname",["_container",""],["_ammoCount",-1]];
 private ["_addedToPlayer", "_canAdd", "_type", "_pos"];
 
 _canAdd = false;

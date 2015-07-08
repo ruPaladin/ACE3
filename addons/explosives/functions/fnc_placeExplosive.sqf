@@ -21,9 +21,9 @@
  * Public: Yes
  */
 #include "script_component.hpp"
+
+params ["_unit","_pos","_dir","_magazineClass","_triggerConfig","_triggerSpecificVars",["_setupPlaceholderObject",objNull]];
 private ["_ammo", "_explosive", "_attachedTo", "_expPos", "_magazineTrigger"];
-EXPLODE_6_PVT(_this,_unit,_pos,_dir,_magazineClass,_triggerConfig,_triggerSpecificVars);
-_setupPlaceholderObject = param [6,objNull];
 
 _unit playActionNow "PutDown";
 

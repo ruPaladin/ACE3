@@ -16,10 +16,9 @@
  */
 #include "script_component.hpp"
 
+private ["_searchOffsetOrName", "_validIndex", "_offsetBy", "_realIndex", "_offset"];
+
 _searchOffsetOrName = param [0,0];
-
-private ["_validIndex", "_offsetBy", "_realIndex", "_offset"];
-
 _validIndex = -1;
 
 if ((typeName _searchOffsetOrName) == "STRING") then {

@@ -15,7 +15,7 @@
  */
 #include "script_component.hpp"
 
-private ["_oldShowMode", "_args", "_pfID", "_player"];
+private ["_newDisplayShowMode","_oldShowMode", "_args", "_pfID", "_player"];
 
 _newDisplayShowMode = param [0,-1];
 _oldShowMode = GVAR(currentShowMode);
