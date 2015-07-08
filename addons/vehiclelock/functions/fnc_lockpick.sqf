@@ -22,7 +22,7 @@
 
 private ["_vehLockpickStrenth","_condition","_returnValue"];
 
-PARAMS_3(_unit,_veh,_funcType);
+params ["_unit","_veh","_funcType"];
 
 if (isNull _unit) exitWith {ERROR("null unit"); false};
 if (isNull _veh) exitWith {ERROR("null vehicle"); false};

@@ -18,7 +18,7 @@
 
 private ["_es", "_e", "_eDiff", "_eGuessPrev", "_cTempDelta", "_twGuess", "_eguess"];
 
-PARAMS_3(_temperature,_pressure,_relativeHumidity);
+params ["_temperature","_pressure","_relativeHumidity"];
 
 // Source: http://cosmoquest.org/forum/showthread.php?155366-Calculating-Wet-Bulb-Temperature-from-RH-amp-Dry-Bulb
 _es = 6.112 * exp((17.67 * _temperature) / (_temperature + 243.5));

@@ -23,7 +23,7 @@
 private ["_fncSumArray", "_return", "_holder", "_dropPos", "_targetMagazinesStart", "_holderMagazinesStart", "_xClassname", "_xAmmo", "_targetMagazinesEnd", "_holderMagazinesEnd", "_holderItemsStart", "_targetItemsStart", "_addToCrateClassnames", "_addToCrateCount", "_index", "_holderItemsEnd", "_targetItemsEnd", "_holderIsEmpty"];
 
 
-PARAMS_3(_caller,_target,_listOfItemsToRemove);
+params ["_caller","_target","_listOfItemsToRemove"];
 DEFAULT_PARAM(3,_doNotDropAmmo,false); //By default units drop all weapon mags when dropping a weapon
 
 _fncSumArray = {

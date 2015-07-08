@@ -40,11 +40,11 @@ if (!("ACE_wirecutter" in (items ace_player))) exitWith {};
         if (((getPosASL ace_player) distance _setPosition) > 5) then {
 
             _fncStatement = {
-                PARAMS_3(_dummyTarget,_player,_attachedFence);
+                params ["_dummyTarget","_player","_attachedFence"];
                 [_player, _attachedFence] call FUNC(cutDownFence);
             };
             _fncCondition = {
-                PARAMS_3(_dummyTarget,_player,_attachedFence);
+                params ["_dummyTarget","_player","_attachedFence"];
                 ((!isNull _attachedFence) && {(damage _attachedFence) < 1} && {("ACE_wirecutter" in (items _player))})
             };
 

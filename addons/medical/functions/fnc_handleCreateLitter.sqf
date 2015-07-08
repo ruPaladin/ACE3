@@ -3,7 +3,7 @@
 
 if(!hasInterface) exitWith { false };
 
-PARAMS_3(_litterClass,_position,_direction);
+params ["_litterClass","_position","_direction"];
 private["_litterObject", "_maxLitterCount"];
 //IGNORE_PRIVATE_WARNING(_values);
 
@@ -17,8 +17,8 @@ _litterObject setDir _direction;
 _litterObject setPosATL _position;
 // Move the litter next frame to get rid of HORRIBLE spacing, fixes #1112
 [{ (_this select 0) setPosATL (_this select 1); }, [_litterObject, _position]] call EFUNC(common,execNextFrame);
-    
-_maxLitterCount = getArray (configFile >> "ACE_Settings" >> QGVAR(litterSimulationDetail) >> "_values") select GVAR(litterSimulationDetail); 
+
+_maxLitterCount = getArray (configFile >> "ACE_Settings" >> QGVAR(litterSimulationDetail) >> "_values") select GVAR(litterSimulationDetail);
 if((count GVAR(allCreatedLitter)) > _maxLitterCount ) then {
     // gank the first litter object, and spawn ours.
     private["_oldLitter"];
@@ -45,7 +45,7 @@ if(!GVAR(litterPFHRunning) && {GVAR(litterCleanUpDelay) > 0}) then {
         if ( (count GVAR(allCreatedLitter)) == 0) exitwith {
             [(_this select 1)] call CBA_fnc_removePerFrameHandler;
             GVAR(litterPFHRunning) = false;
-        }; 
+        };
     }, 30, []] call cba_fnc_addPerFrameHandler;
 };
 

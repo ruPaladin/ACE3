@@ -20,7 +20,7 @@ if !(hasInterface) exitWith {};
 
 ["setAmmoSync", {
     //To propagate the setAmmo change, do it on all clients
-    PARAMS_3(_unit,_weapon,_ammo);
+    params ["_unit","_weapon","_ammo"];
     _unit setAmmo [_weapon, _ammo];
 }] call EFUNC(common,addEventhandler);
 

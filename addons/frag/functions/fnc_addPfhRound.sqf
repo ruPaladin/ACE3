@@ -2,7 +2,7 @@
 #include "script_component.hpp"
 
 private ["_enabled","_doFragTrack", "_doSpall", "_spallTrack", "_spallTrackID"];
-PARAMS_3(_gun,_type,_round);
+params ["_gun","_type","_round"];
 
 if (!GVAR(enabled)) exitWith {};
 
@@ -46,13 +46,13 @@ if(GVAR(autoTrace)) then {
 };
 
 // We only do the single track object check here.
-// We should do an {!(_round in GVAR(objects))}  
+// We should do an {!(_round in GVAR(objects))}
 // But we leave that out here for optimization. So this cannot be a framework function
 // Otherwise, it should only be added once and from the FiredEH
 if(_doFragTrack && alive _round) then {
     _spallTrack = [];
     _spallTrackID = [];
-    
+
     private["_args"];
     _args = [_round, (getPosASL _round), (velocity _round), _type, diag_frameno, _gun, _doSpall, _spallTrack, _spallTrackID,
             (getNumber (configFile >> "CfgAmmo" >> _type >> QGVAR(skip))),
@@ -64,7 +64,7 @@ if(_doFragTrack && alive _round) then {
     TRACE_1("Initializing track", _round);
     GVAR(objects) pushBack _round;
     GVAR(arguments) pushBack _args;
-    
+
     if(_doSpall) then {
         [_round, 1, _spallTrack, _spallTrackID] call FUNC(spallTrack);
     };

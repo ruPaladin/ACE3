@@ -17,7 +17,7 @@
  */
 #include "script_component.hpp"
 
-PARAMS_3(_logic,_syncedObjects,_activated);
+params ["_logic","_syncedObjects","_activated"];
 
 if !(_activated) exitWith {WARNING("Vehicle Lock Sync Module - placed but not active");};
 if (!isServer) exitWith {};

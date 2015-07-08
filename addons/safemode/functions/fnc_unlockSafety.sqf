@@ -1,7 +1,7 @@
 // by commy2
 #include "script_component.hpp"
 
-PARAMS_3(_unit,_weapon,_muzzle);
+params ["_unit","_weapon","_muzzle"];
 
 private ["_safedWeapons"];
 _safedWeapons = _unit getVariable [QGVAR(safedWeapons), []];

@@ -38,13 +38,13 @@ _fnc_getMemPointOffset = {
 
 // Add UserActions for the building:
 _fnc_userAction_Statement = {
-    PARAMS_3(_target,_player,_variable);
+    params ["_target","_player","_variable"];
     EXPLODE_2_PVT(_variable,_actionStatement,_actionCondition);
     this = _target getVariable [QGVAR(building), objNull];
     call _actionStatement;
 };
 _fnc_userAction_Condition = {
-    PARAMS_3(_target,_player,_variable);
+    params ["_target","_player","_variable"];
     EXPLODE_2_PVT(_variable,_actionStatement,_actionCondition);
     this = _target getVariable [QGVAR(building), objNull];
     if (isNull this) exitWith {false};
@@ -84,14 +84,14 @@ for "_index" from 0 to ((count _configPath) - 1) do {
 
 // Add Ladder Actions for the building:
 _fnc_ladder_ladderUp = {
-    PARAMS_3(_target,_player,_variable);
+    params ["_target","_player","_variable"];
     EXPLODE_1_PVT(_variable,_ladderIndex);
     _building = _target getVariable [QGVAR(building), objNull];
     TRACE_3("Ladder Action - UP",_player,_building,_ladderIndex);
     _player action ["LadderUp", _building, _ladderIndex, 0];
 };
 _fnc_ladder_ladderDown = {
-    PARAMS_3(_target,_player,_variable);
+    params ["_target","_player","_variable"];
     EXPLODE_1_PVT(_variable,_ladderIndex);
     _building = _target getVariable [QGVAR(building), objNull];
     TRACE_3("Ladder Action - Down",_player,_building,_ladderIndex);

@@ -14,7 +14,7 @@
  */
 #include "script_component.hpp"
 
-PARAMS_3(_unit,_turretAndDirection,_majorStep);
+params ["_unit","_turretAndDirection","_majorStep"];
 
 if (!(_unit isKindOf "Man")) exitWith {false};
 if (currentMuzzle _unit != currentWeapon _unit) exitWith {false};

@@ -19,7 +19,7 @@
 
 private ["_itemClassname", "_itemVehClass", "_onAtachText", "_selfAttachPosition", "_attachedItem", "_tempObject", "_actionID"];
 
-PARAMS_3(_attachToVehicle,_unit,_args);
+params ["_attachToVehicle","_unit","_args"];
 _itemClassname = [_args, 0, ""] call CBA_fnc_defaultParam;
 
 //Sanity Check (_unit has item in inventory, not over attach limit)

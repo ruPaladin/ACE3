@@ -23,7 +23,7 @@ disableSerialization;
 private ["_airFriction", "_ammoConfig", "_atmosphereModel", "_barometricPressure", "_barrelLength", "_barrelTwist", "_bc", "_bulletMass", "_boreHeight", "_cacheEntry", "_column", "_control", "_dragModel", "_i", "_muzzleVelocity", "_mv", "_mvShift", "_offset", "_relativeHumidity", "_result", "_row", "_scopeBaseAngle", "_weaponConfig", "_zeroRange", "_initSpeed", "_initSpeedCoef", "_useABConfig"];
 _useABConfig = (missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]);
 
-PARAMS_3(_ammoClass,_magazineClass,_weaponClass);
+params ["_ammoClass","_magazineClass","_weaponClass"];
 
 if (_ammoClass == "" || _magazineClass == "" || _weaponClass == "") exitWith {};
 
@@ -169,13 +169,13 @@ if (isNil {_cacheEntry}) then {
         {
             _mvShift = [_ammoConfig select 9, _x] call EFUNC(advanced_ballistics,calculateAmmoTemperatureVelocityShift);
             _mv = _muzzleVelocity + _mvShift;
-            
+
             [_scopeBaseAngle,_bulletMass,_boreHeight,_airFriction,_mv,_x,_barometricPressure,_relativeHumidity,1000,[4,0],3,0,1,GVAR(rangeCardEndRange),_bc,_dragModel,_atmosphereModel,true,1.5,1,46,23,_forEachIndex,_useABConfig] call FUNC(calculateSolution);
         } forEach [-15, -5, 5, 10, 15, 20, 25, 30, 35];
-    } else {        
+    } else {
         [_scopeBaseAngle,_bulletMass,_boreHeight,_airFriction,_muzzleVelocity,15,_barometricPressure,_relativeHumidity,1000,[4,0],3,0,1,GVAR(rangeCardEndRange),_bc,_dragModel,_atmosphereModel,true,1.5,1,46,23,3,_useABConfig] call FUNC(calculateSolution);
     };
-    
+
     for "_i" from 0 to 9 do {
         GVAR(lastValidRow) pushBack count (GVAR(rangeCardDataElevation) select _i);
         while {count (GVAR(rangeCardDataElevation) select _i) < 50} do {
@@ -190,7 +190,7 @@ if (isNil {_cacheEntry}) then {
             };
         };
     };
-    
+
     missionNamespace setVariable [format[QGVAR(%1_%2_%3), _ammoClass, _weaponClass, missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]], [GVAR(rangeCardDataElevation), GVAR(rangeCardDataWindage), GVAR(rangeCardDataLead), GVAR(rangeCardDataMVs), GVAR(lastValidRow)]];
 } else {
     GVAR(rangeCardDataElevation) = _cacheEntry select 0;

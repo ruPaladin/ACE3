@@ -18,7 +18,7 @@
 
 private ["_force"];
 
-PARAMS_3(_unit,_animation,_priority);
+params ["_unit","_animation","_priority"];
 _force = False;
 
 // no animation given

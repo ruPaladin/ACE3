@@ -19,7 +19,7 @@
 
 private ["_index", "_data", "_config"];
 
-PARAMS_3(_allMapMarkers,_allMapMarkersProperties,_logic);
+params ["_allMapMarkers","_allMapMarkersProperties","_logic"];
 
 {
     _index = _allMapMarkers find _x;

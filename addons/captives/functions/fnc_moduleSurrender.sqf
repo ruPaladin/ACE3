@@ -17,7 +17,7 @@
  */
 #include "script_component.hpp"
 
-PARAMS_3(_logic,_units,_activated);
+params ["_logic","_units","_activated"];
 private ["_bisMouseOver", "_mouseOverObject"];
 
 if (!_activated) exitWith {};

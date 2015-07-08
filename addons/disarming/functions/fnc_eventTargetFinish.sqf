@@ -18,7 +18,7 @@
  */
 #include "script_component.hpp"
 
-PARAMS_3(_caller,_target,_errorMsg);
+params ["_caller","_target","_errorMsg"];
 
 if (_errorMsg != "") then {
     diag_log text format ["[ACE_Disarming] %1 - eventTargetFinish: %2", ACE_time, _this];

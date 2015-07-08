@@ -1,7 +1,7 @@
 // by commy2
 #include "script_component.hpp"
 
-PARAMS_3(_unit,_vehicle,_index);
+params ["_unit","_vehicle","_index"];
 
 private "_turret";
 _turret = [_unit] call EFUNC(common,getTurretIndex);

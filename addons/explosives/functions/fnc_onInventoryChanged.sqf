@@ -18,7 +18,7 @@
  */
 #include "script_component.hpp"
 private ["_config", "_detonators"];
-PARAMS_3(_receiver,_giver,_item);
+params ["_receiver","_giver","_item"];
 
 if (_receiver != ace_player) exitWith {};
 

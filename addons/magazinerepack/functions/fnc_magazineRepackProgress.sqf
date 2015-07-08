@@ -20,7 +20,7 @@
 
 private ["_currentAmmoCount", "_addedMagazines", "_missingAmmo", "_index", "_updateMagazinesOnPlayerFnc"];
 
-PARAMS_3(_args,_elapsedTime,_totalTime);
+params ["_args","_elapsedTime","_totalTime"];
 EXPLODE_3_PVT(_args,_magazineClassname,_lastAmmoCount,_simEvents);
 if ((count _simEvents) == 0) exitWith {ERROR("No Event"); false};
 EXPLODE_3_PVT((_simEvents select 0),_nextEventTime,_nextEventIsBullet,_nextEventMags);

@@ -17,7 +17,7 @@
  */
 #include "script_component.hpp"
 
-PARAMS_3(_attachToVehicle,_player,_args);
+params ["_attachToVehicle","_player","_args"];
 
 private ["_itemName", "_attachLimit", "_attachedObjects","_playerPos"];
 

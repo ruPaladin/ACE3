@@ -12,7 +12,7 @@
 
 private ["_global","_definedVariable"];
 
-PARAMS_3(_unit,_variable,_value);
+params ["_unit","_variable","_value"];
 
 _global = false;
 

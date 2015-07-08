@@ -19,7 +19,7 @@
 
 private ["_horizontalDistance", "_verticleDistance", "_targetOffset", "_targetPosASL"];
 
-PARAMS_3(_slopeDistance,_azimuth,_inclination);
+params ["_slopeDistance","_azimuth","_inclination"];
 
 if (GVAR(currentWaypoint) != -2) exitWith {}; //Only take waypoint when "connected"
 if (_slopeDistance < 0) exitWith {}; //Bad Data

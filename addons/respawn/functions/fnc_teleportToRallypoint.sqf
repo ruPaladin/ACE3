@@ -17,7 +17,7 @@
  */
 #include "script_component.hpp"
 
-PARAMS_3(_unit,_side,_rallypoint);
+params ["_unit","_side","_rallypoint"];
 
 private ["_toBase"];
 

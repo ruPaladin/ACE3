@@ -18,7 +18,7 @@
  */
 #include "script_component.hpp"
 
-PARAMS_3(_caller,_target,_listOfObjectsToRemove);
+params ["_caller","_target","_listOfObjectsToRemove"];
 
 private "_itemsToAdd";
 
