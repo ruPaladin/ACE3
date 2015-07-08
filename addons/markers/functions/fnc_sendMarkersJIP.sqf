@@ -15,7 +15,7 @@
  */
 #include "script_component.hpp"
 
-PARAMS_1(_logic);
+params ["_logic"];
 
 [QGVAR(setMarkerJIP), [_logic], [
 GETGVAR(allMapMarkers,[]),

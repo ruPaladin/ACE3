@@ -17,7 +17,7 @@
 
 #define __ANIMS ["extract_1","extract_2","extract_3","extract_4","extract_5","extract_6","extract_7","extract_8","extract_9","extract_10","extract_11"]
 
-PARAMS_1(_ladder);
+params ["_ladder"];
 
 detach _ladder;
 _ladder animate ["rotate", 0];

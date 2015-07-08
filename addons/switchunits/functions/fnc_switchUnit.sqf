@@ -20,7 +20,7 @@
 
 private ["_nearestEnemyPlayers", "_allNearestPlayers", "_oldUnit", "_leave"];
 
-PARAMS_1(_unit);
+params ["_unit"];
 
 // don't switch to original player units
 if (!([_unit] call FUNC(isValidAi))) exitWith {};

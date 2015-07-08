@@ -22,7 +22,7 @@
     private ["_display", "_text", "_picture", "_channel", "_buttonOK", "_buttonCancel", "_description", "_title", "_descriptionChannel", "_sizeX", "_sizeY", "_aceShapeLB", "_aceColorLB", "_aceAngleSlider", "_aceAngleSliderText", "_mapIDD", "_pos", "_posX", "_posY", "_posW", "_posH", "_offsetButtons", "_buttonOk", "_curSelShape", "_curSelColor", "_curSelAngle"];
 
     disableserialization;
-    PARAMS_1(_display);
+    params ["_display"];
 
     //Can't place markers when can't interact
     if (!([ACE_player, objNull, ["notOnMap", "isNotInside", "isNotSitting"]] call EFUNC(common,canInteractWith))) exitWith {

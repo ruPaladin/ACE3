@@ -24,10 +24,10 @@ params ["_unit","_weapon","_muzzle","_mode","_ammo","_magazine","_projectile"];
 if (_ammo != "F_HuntIR") exitWith {};
 
 [{
-    PARAMS_1(_projectile);
+    params ["_projectile"];
     "ACE_HuntIR_Propell" createVehicle (getPosATL _projectile);
     [{
-        PARAMS_1(_position);
+        params ["_position"];
         private ["_huntir"];
         _huntir = createVehicle ["ACE_HuntIR", _position, [], 0, "FLY"];
         _huntir setPosATL _position;

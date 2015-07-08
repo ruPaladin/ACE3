@@ -16,7 +16,7 @@
  */
 #include "script_component.hpp"
 
-PARAMS_1(_vehicle);
+params ["_vehicle"];
 
 if (!isServer) exitWith {};
 
@@ -24,7 +24,7 @@ if (!isServer) exitWith {};
     //If the module wasn't placed, just exit (needs to be in wait because objectInitEH is before moduleInit)
     if (GVAR(VehicleStartingLockState) == -1) exitWith {};
     private ["_lock"];
-    PARAMS_1(_vehicle);
+    params ["_vehicle"];
     if ((_vehicle isKindOf "Car") || {_vehicle isKindOf "Tank"} || {_vehicle isKindOf "Helicopter"}) then {
         //set lock state (eliminates the ambigious 1-"Default" and 3-"Locked for Player" states)
         _lock = switch (GVAR(VehicleStartingLockState)) do {

@@ -11,7 +11,7 @@ GVAR(ParsedTextCached) = [];
 //Setup text/shadow/size/color settings matrix
 [] call FUNC(setupTextColors);
 ["SettingChanged", {
-    PARAMS_1(_name);
+    params ["_name"];
     if (_name in [QGVAR(colorTextMax), QGVAR(colorTextMin), QGVAR(colorShadowMax), QGVAR(colorShadowMin), QGVAR(textSize), QGVAR(shadowSetting)]) then {
         [] call FUNC(setupTextColors);
     };

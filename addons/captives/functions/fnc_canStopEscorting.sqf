@@ -16,7 +16,7 @@
  */
 #include "script_component.hpp"
 
-PARAMS_1(_unit);
+params ["_unit"];
 DEFAULT_PARAM(1,_target,objNull);
 
 if (isNull _target) then {

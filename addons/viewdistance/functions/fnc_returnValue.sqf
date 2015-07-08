@@ -17,7 +17,7 @@
 
 #include "script_component.hpp"
 
-PARAMS_1(_index);
+params ["_index"];
 
 private ["_return"];
 

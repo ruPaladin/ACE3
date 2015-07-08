@@ -12,7 +12,7 @@
  */
 #include "script_component.hpp"
 
-PARAMS_1(_optionEntry);
+params ["_optionEntry"];
 
 private ["_fnc_getValueWithType", "_value","_name", "_typeName", "_settingData", "_valueConfig", "_text"];
 

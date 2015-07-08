@@ -13,7 +13,7 @@
 
 private ["_text", "_nextMuzzle"];
 
-PARAMS_1(_unit);
+params ["_unit"];
 
 _nextMuzzle = ["All"] call FUNC(findNextGrenadeMuzzle);
 

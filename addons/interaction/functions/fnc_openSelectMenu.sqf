@@ -33,7 +33,7 @@ if (!(profileNamespace getVariable [QGVAR(FlowMenu), false])) then {
     buttonSetAction [8860, QUOTE( (call compile (lbData [ARR_2(8866, lbCurSel 8866)])) call GVAR(SelectAccept); )]; // Accept
     lbSetCurSel [8866, 0];
 }else{
-    PARAMS_1(_customActions);
+    params ["_customActions"];
 
     private ["_count", "_action"];
 

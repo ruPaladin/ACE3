@@ -1,7 +1,7 @@
 /*
  * Author: Winter
  * Returns the object view distance coefficient according to the given index
- * 
+ *
  *
  * Arguments:
  * 0: Object View Distance setting Index <SCALAR>
@@ -17,7 +17,7 @@
 
 #include "script_component.hpp"
 
-PARAMS_1(_index);
+params ["_index"];
 
 private ["_return"];
 

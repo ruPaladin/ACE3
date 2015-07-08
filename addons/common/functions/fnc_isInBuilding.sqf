@@ -15,7 +15,7 @@
 
 private ["_position", "_positionX", "_positionY", "_positionZ", "_intersections"];
 
-PARAMS_1(_unit);
+params ["_unit"];
 
 _position = eyePos _unit;
 _positionX = _position select 0;

@@ -17,7 +17,7 @@
  */
 #include "script_component.hpp"
 
-PARAMS_1(_distance);
+params ["_distance"];
 
 private ["_position0", "_position1", "_intersections", "_count", "_house", "_door"];
 

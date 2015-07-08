@@ -16,7 +16,7 @@
  */
 #include "script_component.hpp"
 
-PARAMS_1(_wpIndex);
+params ["_wpIndex"];
 
 private "_waypoints";
 

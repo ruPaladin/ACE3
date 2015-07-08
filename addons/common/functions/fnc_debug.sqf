@@ -13,7 +13,7 @@
 #define DEFAULT_TEXT_DISPLAY -1
 
 private ["_level", "_prefix", "_defaultLoglevel","_defaultLogDisplayLevel", "_message"];
-PARAMS_1(_msg);
+params ["_msg"];
 _level = if (count _this > 1) then {_this select 1} else { 2 };
 
 if (typeName _level != "NUMBER") then {

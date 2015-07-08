@@ -18,7 +18,7 @@
 
 private ["_display", "_theMap", "_mapSize", "_centerPos", "_mapCtrlPos"];
 
-PARAMS_1(_newMode);
+params ["_newMode"];
 
 disableSerialization;
 _display = displayNull;

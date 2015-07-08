@@ -16,7 +16,7 @@
 
 #include "script_component.hpp"
 
-PARAMS_1(_player);
+params ["_player"];
 
 if (GVAR(EnableSwitchUnits)) then {
     private "_sides";

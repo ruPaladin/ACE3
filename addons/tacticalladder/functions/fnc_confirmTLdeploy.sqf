@@ -15,7 +15,7 @@
  */
 #include "script_component.hpp"
 
-PARAMS_1(_ladder);
+params ["_ladder"];
 
 private ["_pos1", "_pos2"];
 _pos1 = getPosASL GVAR(ladder);

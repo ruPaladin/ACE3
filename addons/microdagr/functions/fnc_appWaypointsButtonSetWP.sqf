@@ -18,7 +18,7 @@
 private ["_wpListBox", "_newWpIndex", "_waypoints"];
 
 disableSerialization;
-PARAMS_1(_wpButton);
+params ["_wpButton"];
 
 _wpListBox = (ctrlParent _wpButton) displayCtrl 144501;
 _newWpIndex = lbCurSel _wpListBox;

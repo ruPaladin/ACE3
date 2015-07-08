@@ -15,7 +15,7 @@
  */
 #include "script_component.hpp"
 
-PARAMS_1(_interactionType);
+params ["_interactionType"];
 
 //Ignore self-interaction menu
 if (_interactionType != 0) exitWith {};

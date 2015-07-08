@@ -18,7 +18,7 @@
 
 private ["_settingsMenu", "_localizedHeader"];
 
-PARAMS_1(_openTab);
+params ["_openTab"];
 GVAR(optionMenu_openTab) = _openTab;
 
 disableSerialization;

@@ -17,7 +17,7 @@
 
 disableSerialization;
 
-PARAMS_1(_player);
+params ["_player"];
 DEFAULT_PARAM(1,_display,(findDisplay 602));
 
 _player removeMagazines "ACE_PreloadedMissileDummy";

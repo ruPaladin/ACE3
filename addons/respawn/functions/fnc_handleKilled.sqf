@@ -17,7 +17,7 @@
 
 #include "script_component.hpp"
 
-PARAMS_1(_killedUnit);
+params ["_killedUnit"];
 
 // Saves the gear when the player! (and only him) is killed
 if (ACE_player == _killedUnit) then {

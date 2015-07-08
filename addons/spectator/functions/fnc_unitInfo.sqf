@@ -20,7 +20,7 @@
 
 #include "script_component.hpp"
 
-PARAMS_1(_unit);
+params ["_unit"];
 
 _name = [_unit] call EFUNC(common,getName);
 _side = [_unit] call FUNC(unitSide);

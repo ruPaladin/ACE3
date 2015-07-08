@@ -18,7 +18,7 @@
 #define DISTANCE 50
 #define RADIUS 10
 
-PARAMS_1(_unit);
+params ["_unit"];
 
 private ["_chance", "_x"];
 

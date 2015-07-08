@@ -15,7 +15,7 @@
  */
 #include "script_component.hpp"
 
-PARAMS_1(_scroll);
+params ["_scroll"];
 
 if (GETMVAR(ACE_Modifier,0) == 0 || GVAR(adjustPFH) == -1) exitWith { false };
 

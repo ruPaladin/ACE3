@@ -17,7 +17,7 @@
 
 private ["_theMap", "_sizeX", "_sizeY", "_textureConfig", "_texture", "_markerSize", "_markerShadow", "_colorConfig", "_drawColor"];
 
-PARAMS_1(_theMap);
+params ["_theMap"];
 
 //Only show if marker place is open:
 if (isNull (findDisplay 54)) exitWith {};

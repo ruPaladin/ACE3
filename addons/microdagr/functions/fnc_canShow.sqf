@@ -15,7 +15,7 @@
  */
 #include "script_component.hpp"
 
-PARAMS_1(_showType);
+params ["_showType"];
 
 private ["_returnValue"];
 

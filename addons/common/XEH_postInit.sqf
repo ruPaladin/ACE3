@@ -110,7 +110,7 @@ call FUNC(checkFiles);
 
 // Create a pfh to wait until all postinits are ready and settings are initialized
 [{
-    PARAMS_1(_args);
+    params ["_args"];
     EXPLODE_1_PVT(_args,_waitingMsgSent);
     // If post inits are not ready then wait
     if !(SLX_XEH_MACHINE select 8) exitWith {};

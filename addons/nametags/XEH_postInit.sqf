@@ -29,13 +29,13 @@ GVAR(showNamesTime) = -10;
     if (!(isNull ACE_player) && { alive ACE_player } ) then {
         _leader = leader (group ACE_player);
         _playerIsLeader = false;
-        
+
         if(alive _leader) then {
             if(_leader == ACE_player) then {
                 _playerIsLeader = true;
             };
         };
-        
+
         if (_playerIsLeader) then {
             {
                 if(alive _x) then {
@@ -66,7 +66,7 @@ GVAR(showNamesTime) = -10;
 
 // Change settings accordingly when they are changed
 ["SettingChanged", {
-    PARAMS_1(_name);
+    params ["_name"];
     if (_name  == QGVAR(showPlayerNames)) then {
         call FUNC(updateSettings);
     };

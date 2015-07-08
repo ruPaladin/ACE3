@@ -22,7 +22,7 @@
 
 private ["_type", "_varName", "_data", "_isAir", "_config", "_fnc_addTurret", "_fnc_addTurretUnit"];
 
-PARAMS_1(_type);
+params ["_type"];
 
 _varName = format ["ACE_CrewInfo_Cache_%1", _type];
 _data = + (uiNamespace getVariable _varName);
@@ -74,7 +74,7 @@ _fnc_addTurretUnit = {
         _role = FFV;
     };
 
-    _data pushBack [_path, _role];  
+    _data pushBack [_path, _role];
 };
 
 
@@ -88,12 +88,12 @@ _fnc_addTurret = {
     _config = _config >> "Turrets";
     _count = count _config;
 
-    _offset = 0;    
+    _offset = 0;
 
     for "_index" from 0 to (_count - 1) do {
         _turretPath = _path + [_index - _offset];
         _turretConfig = _config select _index;
-        if (isClass _turretConfig) then {           
+        if (isClass _turretConfig) then {
             [_turretConfig, _turretPath] call _fnc_addTurretUnit;
             [_turretConfig, _turretPath] call _fnc_addTurret;
         } else {

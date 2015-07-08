@@ -13,7 +13,7 @@
 
 private ["_nextMuzzle", "_text"];
 
-PARAMS_1(_unit);
+params ["_unit"];
 
 _nextMuzzle = ["NonFrag"] call FUNC(findNextGrenadeMuzzle);
 

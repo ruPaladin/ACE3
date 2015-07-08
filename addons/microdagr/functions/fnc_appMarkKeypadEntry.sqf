@@ -16,7 +16,7 @@
 #include "script_component.hpp"
 
 private ["_display", "_editText", "_gridPosTuple", "_actualPos"];
-PARAMS_1(_keypadButton);
+params ["_keypadButton"];
 
 disableSerialization;
 _display = displayNull;

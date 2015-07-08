@@ -15,7 +15,7 @@
  */
 #include "script_component.hpp"
 
-PARAMS_1(_player);
+params ["_player"];
 
 if (_player getVariable [QGVAR(isSitting), false]) then {
     [_player] call FUNC(stand);

@@ -2,7 +2,7 @@
 #include "script_component.hpp"
 TRACE_1("enter", _this);
 
-PARAMS_1(_laserTarget);
+params ["_laserTarget"];
 private["_uuid"];
 
 // Add the target to the global targets array
@@ -25,9 +25,9 @@ if(!isDedicated) then {
     // @TODO: Get ownership variables and set them on the vehicle
 
     _uuid = [(vehicle ACE_player), ACE_player, QFUNC(vanillaLaserSeekerHandler), ACE_DEFAULT_LASER_WAVELENGTH, ACE_DEFAULT_LASER_CODE, ACE_DEFAULT_LASER_BEAMSPREAD] call FUNC(laserOn);
-    _laserTarget setVariable [QGVAR(uuid), _uuid, false];   
+    _laserTarget setVariable [QGVAR(uuid), _uuid, false];
    [FUNC(laserTargetPFH), 0, [_laserTarget, ACE_player, _uuid]] call cba_fnc_addPerFrameHandler;
 } else {
-    // server side ownership of laser 
+    // server side ownership of laser
     _laserTarget setVariable [QGVAR(owner), nil, true];
 };

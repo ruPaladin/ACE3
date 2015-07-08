@@ -41,7 +41,7 @@ if (_vehLockpickStrenth < 0) exitWith {false};
 
 //Condition check for progressBar
 _condition = {
-    PARAMS_1(_args);
+    params ["_args"];
     EXPLODE_2_PVT(_args,_unit,_veh);
     ((_unit distance _veh) < 5) && {(speed _veh) < 0.1}
 };

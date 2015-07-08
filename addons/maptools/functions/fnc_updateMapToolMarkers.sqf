@@ -16,7 +16,7 @@
 #define CENTER_OFFSET_Y_PERC  0.1606
 #define CONSTANT_SCALE        0.2
 
-PARAMS_1(_theMap);
+params ["_theMap"];
 
 private ["_rotatingTexture", "_textureWidth", "_scale", "_xPos", "_yPos"];
 

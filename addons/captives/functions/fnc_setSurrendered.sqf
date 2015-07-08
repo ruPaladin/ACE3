@@ -44,7 +44,7 @@ if (_state) then {
 
     // fix anim on mission start (should work on dedicated servers)
     [{
-        PARAMS_1(_unit);
+        params ["_unit"];
         if (_unit getVariable [QGVAR(isSurrendering), false] && {(vehicle _unit) == _unit}) then {
             //Adds an animation changed eh
             //If we get a change in animation then redo the animation (handles people vaulting to break the animation chain)

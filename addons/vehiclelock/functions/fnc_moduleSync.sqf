@@ -24,7 +24,7 @@ if (!isServer) exitWith {};
 
 [{
     private ["_listOfVehicles"];
-    PARAMS_1(_syncedObjects);
+    params ["_syncedObjects"];
     _listOfVehicles = [];
     {
         if ((_x isKindOf "Car") || (_x isKindOf "Tank") || (_x isKindOf "Helicopter")) then {

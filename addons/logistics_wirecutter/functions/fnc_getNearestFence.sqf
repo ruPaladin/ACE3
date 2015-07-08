@@ -16,7 +16,7 @@
 #include "script_component.hpp"
 
 private "_nearestFence";
-PARAMS_1(_unit);
+params ["_unit"];
 
 _nearestFence = objNull;
 {

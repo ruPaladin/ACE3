@@ -15,7 +15,7 @@
  */
 #include "script_component.hpp"
 
-PARAMS_1(_scroll);
+params ["_scroll"];
 
 if (isNull GVAR(ladder)) exitWith { false };
 
@@ -37,7 +37,7 @@ if (GETMVAR(ACE_Modifier,0) == 0) then {
         if (GVAR(ladder) animationPhase (format["extract_%1", _currentStep]) == 1) then {
             GVAR(ladder) animate [format["extract_%1", _currentStep], 0];
             GVAR(currentStep) = _currentStep - 1;
-        };		
+        };
     };
 } else {
     // Tilting

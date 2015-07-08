@@ -3,7 +3,7 @@
 
 private ["_turret", "_weapons"];
 
-PARAMS_1(_vehicle);
+params ["_vehicle"];
 
 _turret = [_vehicle] call EFUNC(common,getTurretCommander);
 

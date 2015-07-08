@@ -33,7 +33,7 @@ if (isServer) then {
     if (GVAR(RemoveDeadBodiesDisconnected)) then {
         addMissionEventHandler ["HandleDisconnect", {
             [{
-                PARAMS_1(_unit);
+                params ["_unit"];
 
                 if (!alive _unit) then {
                     deleteVehicle _unit;

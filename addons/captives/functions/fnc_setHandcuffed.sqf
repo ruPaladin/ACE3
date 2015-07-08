@@ -43,7 +43,7 @@ if (_state) then {
 
     // fix anim on mission start (should work on dedicated servers)
     [{
-        PARAMS_1(_unit);
+        params ["_unit"];
         if (_unit getVariable [QGVAR(isHandcuffed), false] && {vehicle _unit == _unit}) then {
             [_unit] call EFUNC(common,fixLoweredRifleAnimation);
             [_unit, "ACE_AmovPercMstpScapWnonDnon", 1] call EFUNC(common,doAnimation);

@@ -17,7 +17,7 @@
 
 #include "script_component.hpp"
 
-PARAMS_1(_show_prompt);
+params ["_show_prompt"];
 
 private["_land_vehicle","_air_vehicle"];
 

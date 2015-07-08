@@ -24,7 +24,7 @@ if ((_unit call CBA_fnc_getUnitAnim) select 0 == "stand") then {
 };
 
 [{
-    PARAMS_1(_unit);
+    params ["_unit"];
 
     private ["_direction", "_position", "_tripod"];
     _direction = getDir _unit;

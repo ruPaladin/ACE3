@@ -15,6 +15,6 @@
  */
 #include "script_component.hpp"
 
-PARAMS_1(_unit);
+params ["_unit"];
 
 _unit getVariable ["ACE_hasEarPlugsin", false]

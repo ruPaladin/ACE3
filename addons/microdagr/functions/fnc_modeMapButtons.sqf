@@ -15,7 +15,7 @@
  */
 #include "script_component.hpp"
 
-PARAMS_1(_mode);
+params ["_mode"];
 
 [-1] call FUNC(saveCurrentAndSetNewMode); //backup current draw pos/zoom
 

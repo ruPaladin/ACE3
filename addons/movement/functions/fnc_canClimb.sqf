@@ -17,7 +17,7 @@
 
 private ["_pos", "_dir"];
 
-PARAMS_1(_unit);
+params ["_unit"];
 
 _pos = getPosASL _unit;
 _dir = getDir _unit;

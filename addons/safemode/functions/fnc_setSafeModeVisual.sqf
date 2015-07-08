@@ -1,7 +1,7 @@
 // by commy2
 #include "script_component.hpp"
 
-PARAMS_1(_show);
+params ["_show"];
 
 disableSerialization;
 
