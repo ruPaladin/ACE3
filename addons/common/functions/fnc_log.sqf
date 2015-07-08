@@ -4,7 +4,7 @@
 if ((_this select 0) in (missionNamespace getVariable ["ACE_Debug", []])) then {
     _this resize 4;
 
-    PARAMS_4(_type,_argument,_function,_showInGame);
+    params ["_type","_argument","_function","_showInGame"];
 
     if (isNil "_function") then {
         _function = {_this};

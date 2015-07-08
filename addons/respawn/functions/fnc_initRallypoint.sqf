@@ -25,7 +25,7 @@ _name = typeOf _rallypoint;
 if (hasInterface) then {
     // fix init having wrong position, vars etc.
     [_rallypoint, _respawnMarker, _side, _name] spawn {
-        PARAMS_4(_rallypoint,_respawnMarker,_side,_name);
+        params ["_rallypoint","_respawnMarker","_side","_name"];
 
         private ["_marker", "_type"];
 

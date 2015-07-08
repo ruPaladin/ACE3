@@ -11,7 +11,7 @@
 
 private ["_code","_persistent"];
 
-PARAMS_4(_name,_value,_defaultGlobal,_catagory);
+params ["_name","_value","_defaultGlobal","_catagory"];
 
 _code = 0;
 _persistent = false;

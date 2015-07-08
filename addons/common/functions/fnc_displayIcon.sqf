@@ -44,7 +44,7 @@
 
 private ["_allControls", "_refresh", "_timeAlive", "_list"];
 
-PARAMS_4(_iconId,_show,_icon,_color);
+params ["_iconId","_show","_icon","_color"];
 
 _timeAlive = if (count _this > 4) then {_this select 4} else {DEFAULT_TIME};
 

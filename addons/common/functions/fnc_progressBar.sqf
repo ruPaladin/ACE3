@@ -22,7 +22,7 @@
 
 #include "script_component.hpp"
 
-PARAMS_4(_totalTime,_args,_onFinish,_onFail);
+params ["_totalTime","_args","_onFinish","_onFail"];
 DEFAULT_PARAM(4,_localizedTitle,"");
 DEFAULT_PARAM(5,_condition,{true});
 DEFAULT_PARAM(6,_exceptions,[]);

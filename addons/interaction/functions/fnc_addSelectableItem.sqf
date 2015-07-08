@@ -18,7 +18,7 @@
  */
 #include "script_component.hpp"
 
-PARAMS_4(_container,_displayName,_picture,_data);
+params ["_container","_displayName","_picture","_data"];
 
 if (_picture == "" || _picture == "PictureThing") then {
     _picture = QUOTE(PATHTOF(UI\dot_ca.paa));

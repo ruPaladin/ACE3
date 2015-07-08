@@ -22,7 +22,7 @@ _this resize 4;
 
 private ["_lastHintTime", "_lastHintPriority", "_time"];
 
-PARAMS_4(_text,_sound,_delay,_priority);
+params ["_text","_sound","_delay","_priority"];
 
 if (isNil QGVAR(lastHint)) then {
     GVAR(lastHint) = [0, 0];

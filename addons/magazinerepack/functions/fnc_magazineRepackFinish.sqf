@@ -21,7 +21,7 @@
 
 private ["_structuredOutputText", "_picture", "_fullMags", "_partialMags", "_fullMagazineCount"];
 
-PARAMS_4(_args,_elapsedTime,_totalTime,_errorCode);
+params ["_args","_elapsedTime","_totalTime","_errorCode"];
 EXPLODE_2_PVT(_args,_magazineClassname,_lastAmmoCount);
 _fullMagazineCount = getNumber (configfile >> "CfgMagazines" >> _magazineClassname >> "count");
 
